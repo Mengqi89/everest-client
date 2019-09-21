@@ -4,55 +4,62 @@ exports[`NavBar route component renders the UI as expected 1`] = `
 <nav
   className="NavBar"
 >
-  <a
-    aria-current="page"
-    className="active"
-    href="/"
-    onClick={[Function]}
-    style={Object {}}
-  >
-    <h1>
-      <img
-        alt="logo"
-        id="logo"
-        src="logo-everest-eie.png"
-      />
-      EverestIntl
-    </h1>
-  </a>
+  <ul>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <h1>
+        <img
+          alt="logo"
+          id="logo"
+          src="logo-everest-eie.png"
+        />
+        EverestIntl
+      </h1>
+    </a>
+  </ul>
   <ul
     className="nav-links"
   >
-    <li>
+    <li
+      className="bar"
+      id="bar1"
+    >
       <a
-        aria-current={null}
         href="/about-us"
         onClick={[Function]}
       >
         About Us
       </a>
     </li>
-    <li>
+    <li
+      className="bar"
+      id="bar2"
+    >
       <a
-        aria-current={null}
         href="/jobs"
         onClick={[Function]}
       >
         View Jobs
       </a>
     </li>
-    <li>
+    <li
+      className="bar"
+      id="bar3"
+    >
       <a
-        aria-current={null}
         href="/login"
         onClick={[Function]}
       >
         Login
       </a>
     </li>
-    <li>
+    <li
+      className="bar"
+      id="bar4"
+    >
       <a
-        aria-current={null}
         className="highlighted-btn"
         href="/register"
         onClick={[Function]}

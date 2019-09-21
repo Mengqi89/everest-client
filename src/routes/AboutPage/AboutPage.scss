@@ -32,6 +32,8 @@
 .staff_member {
     padding: 1.2em;
     width: calc(100% / 3);
+    box-shadow: 0 0 2px rgba(106, 114, 107, 0.253);
+    border-radius: 10px;
 }
 
 .staff_name {
