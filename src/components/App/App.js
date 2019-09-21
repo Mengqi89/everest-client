@@ -6,6 +6,7 @@ import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
 import ProfilePage from '../../routes/ProfilePage/ProfilePage'
 import LoginPage from '../../routes/LoginPage/LoginPage'
 import JobPage from '../../routes/JobPage/JobPage'
+import AboutPage from '../../routes/AboutPage/AboutPage'
 import NavBar from '../../components/NavBar/NavBar'
 import PrivateRoute from '../../components/Utils/PrivateRoute'
 import PublicOnlyRoute from '../../components/Utils/PublicOnlyRoute'
@@ -37,6 +38,7 @@ class App extends React.Component {
             <Route exact path={'/jobs'} component={JobPage} />
             <Route exact path={'/postJob'} component={PostJobForm} />
             <Route exact path={'/jobs/:job_id/apply'} component={JobApplyPage} />
+            <Route exact path={'/about-us'} component={AboutPage} />
             <PrivateRoute path={'/profile'} component={ProfilePage} />
             <PrivateRoute path={'/edit-profile'} component={EditProfilePage} />
             <PrivateRoute exact path={'/applications'} component={ApplicationsPage} />

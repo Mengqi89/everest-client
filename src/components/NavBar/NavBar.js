@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { NavLink, withRouter } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import TokenService from '../../services/token-service'
 import './NavBar.scss'
@@ -30,50 +30,55 @@ class NavBar extends Component {
     TokenService.clearAuthToken()
   }
 
+  onClickMenu = () => {
+    document.getElementById('menu').classList.toggle('change')
+    document.getElementById('nav').classList.toggle('change')
+  }
+
   renderLogoutLink() {
     const { userType } = this.context
 
     return (
       <>
         <li>
-          <NavLink to='/profile' >
+          <Link to='/profile' >
             Profile
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink to="/edit-profile">
+          <Link to="/edit-profile">
             Edit Profile
-          </NavLink>
+          </Link>
         </li>
         {userType === 'teacher' && <li>
-          <NavLink to="/jobs">
+          <Link to="/jobs">
             <FontAwesomeIcon icon="clipboard" /> View Jobs
-          </NavLink>
+          </Link>
         </li>}
         {userType === 'teacher' && <li>
-          <NavLink to="/applications">
+          <Link to="/applications">
             <FontAwesomeIcon icon="clipboard" /> Applications
-          </NavLink>
+          </Link>
         </li>}
         {userType === 'school' && <li>
-          <NavLink to="/postJob">
+          <Link to="/postJob">
             <FontAwesomeIcon icon="clipboard" /> Post Job
-          </NavLink>
+          </Link>
         </li>}
         {userType === 'school' && <li>
-          <NavLink to="/applications">
+          <Link to="/applications">
             <FontAwesomeIcon icon="clipboard" /> Applications
-          </NavLink>
+          </Link>
         </li>}
         {userType === 'admin' && <li>
-          <NavLink to="/applications">
+          <Link to="/applications">
             <FontAwesomeIcon icon="clipboard" /> Applications
-          </NavLink>
+          </Link>
         </li>}
         <li onClick={this.handleLogoutClick} className="highlighted-btn">
-          <NavLink to='/login'>
+          <Link to='/login'>
             Logout
-          </NavLink>
+          </Link>
 
         </li>
       </>
@@ -83,26 +88,28 @@ class NavBar extends Component {
   renderLoginLink() {
     return (
       <>
-        <li>
-          <NavLink to="/about-us">
+        {/* <div id="menu" onClick={(ev) => this.onClickMenu()}> */}
+        <li id="bar1" className="bar">
+          <Link to="/about-us">
             About Us
-          </NavLink>
+          </Link>
         </li>
-        <li>
-          <NavLink to="/jobs">
+        <li id="bar2" className="bar">
+          <Link to="/jobs">
             View Jobs
-          </NavLink>
+          </Link>
         </li>
-        <li>
-          <NavLink to='/login' >
+        <li id="bar3" className="bar">
+          <Link to='/login' >
             Login
-          </NavLink>
+          </Link>
         </li>
-        <li>
-          <NavLink to="/register" className="highlighted-btn">
+        <li id="bar4" className="bar">
+          <Link to="/register" className="highlighted-btn">
             Register
-          </NavLink>
+          </Link>
         </li>
+        {/* </div> */}
       </>
     )
   }
@@ -112,17 +119,17 @@ class NavBar extends Component {
     return (
       <>
         <nav className="NavBar">
-          <NavLink to="/">
-            <h1>
-              <img src={logo} alt="logo" id="logo" />
-              EverestIntl
+          <ul>
+            <Link to="/">
+              <h1>
+                <img src={logo} alt="logo" id="logo" />
+                EverestIntl
             </h1>
-          </NavLink>
-
+            </Link>
+          </ul>
           <ul className="nav-links">
             {loggedIn ? this.renderLogoutLink() : this.renderLoginLink()}
           </ul>
-
         </nav>
       </>
     )
@@ -130,5 +137,3 @@ class NavBar extends Component {
 }
 
 export default withRouter(NavBar)
-
-//checking user type in login and registration
