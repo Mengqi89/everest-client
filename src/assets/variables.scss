@@ -72,7 +72,7 @@ $fancy-font: 'Montserrat';
 @mixin underline-input {
     border: none;
     border-bottom: 2px solid $accent-color;
-    width: 350px;
+    // width: 350px;
     height: 2em;
     font-size: 1em;
     font-family: $fancy-font;
