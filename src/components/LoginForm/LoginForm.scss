@@ -1,6 +1,7 @@
 @import '../../assets/variables.scss';
 
 .LoginForm {
+
   legend {
     margin-bottom: .5em;
     color: grey;
@@ -11,10 +12,13 @@
     width: initial;
     height: initial
   }
+  fieldset {
+    padding: 0 2em;
+  }
   input {
     border: none;
     border-bottom: 2px solid $accent-color;
-    width: 350px;
+    // width: 350px;
     height: 2em;
     font-size: 1em;
     font-family: $fancy-font;
@@ -26,8 +30,15 @@
   .username, .password {
     label {
       margin-top: 2em;
+      padding: 0 2em;
       color: grey;
     }
+    
+    input {
+      width: 80%;
+      margin: auto;
+    }
+
     display: flex;
     flex-direction: column;
   }
@@ -38,5 +49,7 @@
    display: flex;
    align-items: center;
    justify-content: center;
+   margin-bottom: 1.5em;
+
   }
 }

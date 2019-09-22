@@ -32,20 +32,26 @@
     display: flex;
     list-style-type: none;
     align-items: center;
+    margin-right: 0.6em;
 
     .highlighted-btn {
       @include border-button;
     }
 
-    li {
-      margin-left: 2em;
+    a {
+      margin-right: 1em;
+      font-size: 0.8em;
     }
   }
 }
 
-@media screen and (max-width: 600px) {
-  .nav-links li a {
-    font-size: 0.8em;
+@media screen and (min-width: 600px) {
+  .nav-links { 
+    margin-right: 1em;
+  }
+
+  .NavBar .nav-links li a {
+    font-size: 1em;
   }
 }
 
