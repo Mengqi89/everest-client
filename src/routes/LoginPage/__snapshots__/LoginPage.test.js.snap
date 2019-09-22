@@ -65,6 +65,36 @@ exports[`LoginPage route component renders the UI as expected 1`] = `
           value="admin"
         />
       </fieldset>
+      <fieldset>
+        <legend>
+          Demo Account: 
+        </legend>
+        <select
+          id="demo-select"
+          onChange={[Function]}
+        >
+          <option
+            value=""
+          >
+            --Please choose an option--
+          </option>
+          <option
+            value="teacher"
+          >
+            Teacher
+          </option>
+          <option
+            value="school"
+          >
+            School
+          </option>
+          <option
+            value="admin"
+          >
+            Admin
+          </option>
+        </select>
+      </fieldset>
       <div
         className="username"
       >
