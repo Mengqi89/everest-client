@@ -15,7 +15,7 @@ exports[`NavBar route component renders the UI as expected 1`] = `
           id="logo"
           src="logo-everest-eie.png"
         />
-        EverestIntl
+        Everest
       </h1>
     </a>
   </ul>

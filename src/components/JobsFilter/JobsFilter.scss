@@ -1,15 +1,56 @@
 @import '../../assets/variables.scss';
 
-.JobsFilter{
+// .JobsFilter{
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: row;
+//   max-width: 960px;
+//   margin-right: auto;
+//   margin-left: auto;
+// }
+
+.filter-form {
   display: flex;
-  justify-content: center;
-  flex-direction: row;
-  max-width: 960px;
-  margin-right: auto;
-  margin-left: auto;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  }
+
+.form-group {
+  width: 70%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  label {
+    margin-right: 10px;
+  }
+}
+
+.form-input {
+  input {
+    @include underline-input;
+  }
+}
+
+.form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96%;
+}
+
+button {
+      @include green-button;
+      margin: 0 auto;
+      display: block;
+    }
+
+@media screen and (min-width:600px) {
+  .form-section { flex-wrap: wrap;  }
 
   .filter-form {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -19,37 +60,12 @@
     justify-content: flex-end;
     width: calc(50% - 40px);
     display: flex;
-    align-items: center;
     margin: 15px 0;
-    &:nth-child(2n) {
+      &:nth-child(2n) {
       margin-left: 20px;
       justify-content: flex-start;
     }
-
-    label {
-      margin-right: 10px;
-    }
-  }
-
-  .form-input {
-    input {
-      @include underline-input;
-    }
-  }
-
-  .form-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 96%;
-  }
-
-    @media screen and (max-width:990px) {
-      .form-section { flex-wrap: wrap;  }
-    }
-
-    button {
-      @include green-button;
-      margin-top: 0;
-    }
 }
+}
+
+    

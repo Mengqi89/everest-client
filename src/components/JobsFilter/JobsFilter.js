@@ -74,8 +74,8 @@ export default class JobsFilter extends Component {
                             value={location}
                         />
                     </div>
-                    <button type='submit'>Search</button>
                 </form>
+                <button type='submit'>Search</button>
             </section>
         )
     }
