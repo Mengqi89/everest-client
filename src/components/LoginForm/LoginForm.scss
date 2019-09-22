@@ -4,7 +4,7 @@
 
   legend {
     margin-bottom: .5em;
-    color: grey;
+    color: $accent-color;
   }
 
   input[type=radio] {
@@ -14,11 +14,11 @@
   }
   fieldset {
     padding: 0 2em;
+    margin: 1em auto;
   }
   input {
     border: none;
     border-bottom: 2px solid $accent-color;
-    // width: 350px;
     height: 2em;
     font-size: 1em;
     font-family: $fancy-font;

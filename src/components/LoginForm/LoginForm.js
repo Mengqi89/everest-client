@@ -25,6 +25,7 @@ class LoginForm extends Component {
 
   handleSubmitJwtAuth = ev => {
     ev.preventDefault()
+    console.log(this.state.userType)
     this.setState({ error: null, loading: true })
 
     const { username, password } = ev.target
@@ -86,6 +87,24 @@ class LoginForm extends Component {
     }
   }
 
+  handleDemo = (ev) => {
+    if (ev.target.value === 'teacher') {
+      // document.getElementById('teacher').checked = true
+      document.getElementById('username').value = 'NatBowie'
+      document.getElementById('password').value = 'Password1!'
+    }
+    if (ev.target.value === 'school') {
+      // document.getElementById('school').checked = true
+      document.getElementById('username').value = 'testSchool1'
+      document.getElementById('password').value = 'Password1!'
+    }
+    if (ev.target.value === 'admin') {
+      // document.getElementById('admin').checked = true
+      document.getElementById('username').value = 'dunder'
+      document.getElementById('password').value = 'Password1!'
+    }
+  }
+
   render() {
     const { error, loading } = this.state
 
@@ -100,6 +119,15 @@ class LoginForm extends Component {
           <input type="radio" id="school" name="account-type" value="school" onChange={this.handleUserTypeChange} />
           <label htmlFor="admin">Admin</label>
           <input type="radio" id="admin" name="account-type" value="admin" onChange={this.handleUserTypeChange} />
+        </fieldset>
+        <fieldset>
+          <legend>Demo Account: </legend>
+          <select id="demo-select" onChange={this.handleDemo}>
+            <option value="">--Please choose an option--</option>
+            <option value="teacher">Teacher</option>
+            <option value="school">School</option>
+            <option value="admin">Admin</option>
+          </select>
         </fieldset>
         <div className="username">
           <label htmlFor="username">Username</label>
