@@ -8,7 +8,7 @@
   }
 
   input[type=radio] {
-    margin: 0 1em;
+    margin: 0 0.5em;
     width: initial;
     height: initial
   }
@@ -35,8 +35,7 @@
     }
     
     input {
-      width: 80%;
-      margin: auto;
+      margin: 0 2em;
     }
 
     display: flex;
