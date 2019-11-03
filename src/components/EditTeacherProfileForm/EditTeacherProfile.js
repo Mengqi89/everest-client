@@ -107,11 +107,13 @@ class EditTeacherProfile extends Component {
                         <option value='false'>No</option>
                     </select>
 
-                    <label htmlFor='teacher-married'>Marraige Satus</label>
+                    <label htmlFor='teacher-married'>Marriage Satus</label>
                     <select id='teacher-married' name='married' defaultValue={user.married} required>
                         <option value="" disabled>--select one--</option>
                         <option value='Married'>married</option>
                         <option value='Single'>single</option>
+                        <option value='Domestic-partner'>domestic partner</option>
+
                     </select>
 
                     <label htmlFor='teacher-education'>Education</label>

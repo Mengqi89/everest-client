@@ -27,7 +27,7 @@ const TEACHER = [
         lastName: 'Kahreem',
         Age: 33,
         Sex: 'Male',
-        Nationality: 'USA',
+        Nationality: 'American',
         Race: 'Other',
         NativeSpeaker: 'yes',
         married: 'yes',

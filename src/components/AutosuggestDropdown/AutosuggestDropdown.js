@@ -17,6 +17,9 @@ class AutosuggestDropdown extends React.Component {
       },
       {
         name: 'A-Level'
+      },
+      {
+        name: 'IB'
       }
     ],
     placeholder: '',

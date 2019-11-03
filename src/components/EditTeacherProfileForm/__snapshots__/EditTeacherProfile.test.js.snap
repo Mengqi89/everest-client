@@ -1219,7 +1219,7 @@ exports[`EditTeacherProfile should render correctly 1`] = `
             <label
               htmlFor="teacher-married"
             >
-              Marraige Satus
+              Marriage Satus
             </label>
             <select
               defaultValue="no"
@@ -1242,6 +1242,11 @@ exports[`EditTeacherProfile should render correctly 1`] = `
                 value="Single"
               >
                 single
+              </option>
+              <option
+                value="Domestic-partner"
+              >
+                domestic partner
               </option>
             </select>
             <label

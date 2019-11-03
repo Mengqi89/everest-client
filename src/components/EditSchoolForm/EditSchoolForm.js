@@ -124,7 +124,7 @@ class EditSchoolForm extends Component {
           <AutosuggestDropdown
             handleChange={(val, id) => this.handleAutosuggestChange(val, id)}
             id="curriculum"
-            choices={[{ name: 'AP' }, { name: 'IGSE' }, { name: 'A-Level' }]}
+            choices={[{ name: 'AP' }, { name: 'IGSE' }, { name: 'A-Level' }, { name: 'IB' }]}
             placeholder={user.curriculum}
           />
           <label htmlFor="location">Location</label>
@@ -141,7 +141,7 @@ class EditSchoolForm extends Component {
           />
           <label htmlFor="notable_facts">Notable facts: </label>
           <textarea id="notable_facts" placeholder={user.notable_facts} onChange={(ev) => this.handleUpdateInput(ev)} />
-          <label htmlFor="school_website">Notable facts: </label>
+          <label htmlFor="school_website">Website: </label>
           <input
             id="school_website"
             type="text"
