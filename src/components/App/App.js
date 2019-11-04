@@ -32,7 +32,7 @@ class App extends React.Component {
           )}
 
           <Switch>
-            <PublicOnlyRoute exact path={'/'} component={LandingPage} />
+            <Route exact path={'/'} component={LandingPage} />
             <Route path={'/login'} component={LoginPage} />
             <Route path={'/register'} component={RegistrationPage} />
             <Route exact path={'/jobs'} component={JobPage} />

@@ -280,6 +280,9 @@ exports[`EditSchoolForm should render correctly 1`] = `
                   Object {
                     "name": "A-Level",
                   },
+                  Object {
+                    "name": "IB",
+                  },
                 ]
               }
               handleChange={[Function]}
@@ -563,7 +566,7 @@ exports[`EditSchoolForm should render correctly 1`] = `
             <label
               htmlFor="school_website"
             >
-              Notable facts: 
+              Website: 
             </label>
             <input
               id="school_website"
