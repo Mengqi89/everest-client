@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 import NationalityList from './NationalityList'
 import './TeacherRegistrationForm.css'
 import TeacherApiService from '../../services/teacher-api-service'
-import TokenService from '../../services/token-service'
+// import TokenService from '../../services/token-service'
 
 function TeacherRegistrationForm(props) {
     const [ error, setError ] = useState(null)
@@ -35,7 +35,7 @@ function TeacherRegistrationForm(props) {
             years_in_china: years_in_china.value,
             years_teaching_abroad: years_teaching_abroad.value
         }
-
+        console.log('newTeacher', newTeacher)
         TeacherApiService.postTeacher(newTeacher)
             .then(res => 
                 username.value = '',
@@ -57,14 +57,14 @@ function TeacherRegistrationForm(props) {
                 years_in_china.value = '', 
                 years_teaching_abroad.value = '',
             )
-            .then(res => 
-                TeacherApiService.postLogin({username: newTeacher.username, password: newTeacher.password})
-            )
+            // .then(res => 
+            //     TeacherApiService.postLogin({username: newTeacher.username, password: newTeacher.password})
+            // )
             .then(res => {
-                TokenService.saveAuthToken(res.authToken)
-                TokenService.saveUserType('teacher')
-                props.onSubmitSuccess()
-                props.history.push('/profile')
+                // TokenService.saveAuthToken(res.authToken)
+                // TokenService.saveUserType('teacher')
+                // props.onSubmitSuccess()
+                props.history.push('/login')
             })
             .catch(res => 
                 setError(res.error)

@@ -17,9 +17,9 @@ class RegistrationPage extends Component {
     })
   }
 
-  handleSubmitSuccess = () => {
-    this.context.setLoggedIn(true)
-  }
+  // handleSubmitSuccess = () => {
+  //   this.context.setLoggedIn(true)
+  // }
 
   render() {
     return (
@@ -37,7 +37,8 @@ class RegistrationPage extends Component {
         </fieldset>
         {this.state.accountType === "school" && <SchoolRegistrationForm />}
         {this.state.accountType === "admin" && <AdminRegistrationForm />}
-        {this.state.accountType === 'teacher' && <TeacherRegistrationForm onSubmitSuccess={this.handleSubmitSuccess} />}
+        {this.state.accountType === 'teacher' && <TeacherRegistrationForm
+        />}
       </section>
     )
   }
