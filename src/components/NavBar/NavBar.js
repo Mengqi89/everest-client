@@ -60,16 +60,16 @@ class NavBar extends Component {
             <FontAwesomeIcon icon="clipboard" /> Applications
           </Link>
         </li>}
-        {userType === 'school' && <li>
+        {/* {userType === 'school' && <li>
           <Link to="/postJob">
             <FontAwesomeIcon icon="clipboard" /> Post Job
           </Link>
-        </li>}
-        {userType === 'school' && <li>
+        </li>} */}
+        {/* {userType === 'school' && <li>
           <Link to="/applications">
             <FontAwesomeIcon icon="clipboard" /> Applications
           </Link>
-        </li>}
+        </li>} */}
         {userType === 'admin' && <li>
           <Link to="/applications">
             <FontAwesomeIcon icon="clipboard" /> Applications

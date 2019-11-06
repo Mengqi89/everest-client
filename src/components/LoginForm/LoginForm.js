@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import TokenService from '../../services/token-service'
-import SchoolApiService from '../../services/school-api-service'
+// import SchoolApiService from '../../services/school-api-service'
 import AdminApiService from '../../services/admin-api-service'
 import './LoginForm.scss'
 import TeacherApiService from '../../services/teacher-api-service'
@@ -28,25 +28,25 @@ class LoginForm extends Component {
     this.setState({ error: null, loading: true })
 
     const { username, password } = ev.target
-    if (this.state.userType === 'school') {
-      SchoolApiService.postLogin({
-        username: username.value,
-        password: password.value
-      })
-        .then(res => {
-          username.value = ''
-          password.value = ''
+    // if (this.state.userType === 'school') {
+    //   SchoolApiService.postLogin({
+    //     username: username.value,
+    //     password: password.value
+    //   })
+    //     .then(res => {
+    //       username.value = ''
+    //       password.value = ''
 
-          TokenService.saveAuthToken(res.authToken)
-          TokenService.saveUserType('school')
-          this.context.setUserType('school')
-          this.props.history.push('/profile')
-        })
-        .then(() => this.props.onLoginSuccess())
-        .catch(res => {
-          this.setState({ error: res.error })
-        })
-    }
+    //       TokenService.saveAuthToken(res.authToken)
+    //       TokenService.saveUserType('school')
+    //       this.context.setUserType('school')
+    //       this.props.history.push('/profile')
+    //     })
+    //     .then(() => this.props.onLoginSuccess())
+    //     .catch(res => {
+    //       this.setState({ error: res.error })
+    //     })
+    // }
     if (this.state.userType === 'admin') {
       AdminApiService.postLogin({
         username: username.value,
@@ -92,11 +92,11 @@ class LoginForm extends Component {
       document.getElementById('username').value = 'NatBowie'
       document.getElementById('password').value = 'Password1!'
     }
-    if (ev.target.value === 'school') {
-      // document.getElementById('school').checked = true
-      document.getElementById('username').value = 'testSchool1'
-      document.getElementById('password').value = 'Password1!'
-    }
+    // if (ev.target.value === 'school') {
+    //   // document.getElementById('school').checked = true
+    //   document.getElementById('username').value = 'testSchool1'
+    //   document.getElementById('password').value = 'Password1!'
+    // }
     if (ev.target.value === 'admin') {
       // document.getElementById('admin').checked = true
       document.getElementById('username').value = 'dunder'
@@ -114,8 +114,8 @@ class LoginForm extends Component {
           <legend htmlFor="account-type">I am a:</legend>
           <label htmlFor="teacher">Teacher</label>
           <input type="radio" id="teacher" name="account-type" value="teacher" onChange={this.handleUserTypeChange} />
-          <label htmlFor="school">School</label>
-          <input type="radio" id="school" name="account-type" value="school" onChange={this.handleUserTypeChange} />
+          {/* <label htmlFor="school">School</label>
+          <input type="radio" id="school" name="account-type" value="school" onChange={this.handleUserTypeChange} /> */}
           <label htmlFor="admin">Admin</label>
           <input type="radio" id="admin" name="account-type" value="admin" onChange={this.handleUserTypeChange} />
         </fieldset>
@@ -124,7 +124,7 @@ class LoginForm extends Component {
           <select id="demo-select" onChange={this.handleDemo}>
             <option value="">--Please choose an option--</option>
             <option value="teacher">Teacher</option>
-            <option value="school">School</option>
+            {/* <option value="school">School</option> */}
             <option value="admin">Admin</option>
           </select>
         </fieldset>

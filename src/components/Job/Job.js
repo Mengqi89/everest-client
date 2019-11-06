@@ -5,9 +5,14 @@ import './Job.scss'
 import imgs from '../../assets/schoolImgs'
 
 export default function Job(props) {
-    function toggleHidden() {
-        var element = document.querySelector(".more-details")
-        element.classList.toggle("hidden")
+    function toggleHidden(jobId) {
+        let className = '.job-' + jobId
+        let element = document.getElementsByClassName(className)
+        if (element[0].classList.contains('hidden')) {
+            element[0].classList.remove('hidden')
+        } else {
+            element[0].classList.add('hidden')
+        }
     }
 
     const getRandomImg = (imgs) => {
@@ -28,7 +33,7 @@ export default function Job(props) {
                     <li>Minimum degree desired: {props.minimum_degree_required}</li>
                     <li>Minimum teaching experience desired: {props.minimum_experience_required}</li>
                     <li>Location of school: {props.location}</li>
-                    <div className='more-details hidden'>
+                    <div className={'.job-' + job_id + ' hidden'} >
                         <li>Textbook Used: {props.textbook_used}</li>
                         <li>Number of courses to teach: {props.number_of_courses_to_teach}</li>
                         <li>Number of sections: {props.number_of_sections}</li>
@@ -52,7 +57,7 @@ export default function Job(props) {
                     </div>
                 </ul>
                 {/* <FontAwesomeIcon className='bounce arrowDown' icon={faArrowCircleDown} onClick={toggleHidden}>More details</FontAwesomeIcon> */}
-                <div className='arrow bounce' onClick={toggleHidden}></div>
+                <div className='arrow bounce' onClick={() => toggleHidden(props.job_id)}></div>
             </section>
             <Link to={jobLink}>Apply</Link>
         </section>
