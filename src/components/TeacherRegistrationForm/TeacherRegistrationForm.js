@@ -11,12 +11,13 @@ function TeacherRegistrationForm(props) {
     const handleSubmit = ev => {
         ev.preventDefault()
 
-        const { username, password, first_name, last_name, age, sex, race, nationality, native_speaker,
+        const { username, email, password, first_name, last_name, age, sex, race, nationality, native_speaker,
             married, highest_degree, field_of_degree, school, certification, years_of_experience,
             years_in_china, years_teaching_abroad } = ev.target
 
         const newTeacher = {
             username: username.value,
+            email: email.value,
             password: password.value,
             first_name: first_name.value,
             last_name: last_name.value,
@@ -37,7 +38,8 @@ function TeacherRegistrationForm(props) {
 
         TeacherApiService.postTeacher(newTeacher)
             .then(res => 
-                username.value = '', 
+                username.value = '',
+                email.value = '',
                 password.value = '', 
                 first_name.value = '', 
                 last_name.value = '', 
@@ -77,10 +79,13 @@ function TeacherRegistrationForm(props) {
                     {error && <p className='red'>{error}</p>}
                 </div>
 
-                <label htmlFor='teacher-username'>Enter a Username</label>
+                <label htmlFor='teacher-username'>Username</label>
                 <input id='teacher-usernmae' type='text' name='username' required></input>
 
-                <label htmlFor='teacher-password'>Enter a Password</label>
+                <label htmlFor='teacher-email'>Email</label>
+                <input id='teacher-email' type='text' name='email' required></input>
+
+                <label htmlFor='teacher-password'>Password</label>
                 <input id='teacher-password' type='password' 
                 title='Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more 
                 characters' name='password' required></input>
@@ -98,7 +103,7 @@ function TeacherRegistrationForm(props) {
                 <select id='teacher-sex' name='sex' required>
                     <option value='Male'>Male</option>
                     <option value='Female'>Female</option>
-                    <option value='Gender Neutral'>Gender-Neutral</option>
+                    <option value='Others'>Others</option>
                 </select>
 
                 <label htmlFor='teacher-nationality'>Nationality</label>
@@ -154,7 +159,7 @@ function TeacherRegistrationForm(props) {
                     <option value='Other'>Other</option>
                 </select>
 
-                <label htmlFor='teacher-school'>School Attended</label>
+                <label htmlFor='teacher-school'>College Attended</label>
                 <input id='teacher-school' type='text' name='school' defaultValue='None' required></input>
 
                 <label htmlFor='teacher-certification'>Certification</label>
@@ -165,7 +170,7 @@ function TeacherRegistrationForm(props) {
                     <option value='TEFL/TESOL'>TEFL/TESOL</option>
                 </select>
 
-                <label htmlFor='teacher-experience'>Years Of Experience</label>
+                <label htmlFor='teacher-experience'>Teaching Experience</label>
                 <select id='teacher-experience' name='years_of_experience' defaultValue='0' required>
                     <option value='0'>0</option>
                     <option value='1'>1</option>
@@ -173,7 +178,7 @@ function TeacherRegistrationForm(props) {
                     <option value='3'>3+</option>
                 </select>
 
-                <label htmlFor='teacher-experience-inChina'>Years Of Experience Teaching In China</label>
+                <label htmlFor='teacher-experience-inChina'>Experience Teaching In China</label>
                 <select id='teacher-experience-inChina' name='years_in_china' defaultValue='0' required>
                     <option value='0'>0</option>
                     <option value='1'>1</option>
@@ -181,7 +186,7 @@ function TeacherRegistrationForm(props) {
                     <option value='3'>3+</option>
                 </select>
 
-                <label htmlFor='teacher-experience-notChina'>Years Of Experience Teaching - Other Countries</label>
+                <label htmlFor='teacher-experience-notChina'>Experience Teaching - Other Countries</label>
                 <select id='teacher-experience-notChina' name='years_teaching_abroad' defaultValue='0' required>
                     <option value='0'>0</option>
                     <option value='1'>1</option>

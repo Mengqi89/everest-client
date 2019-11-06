@@ -25,7 +25,6 @@ class LoginForm extends Component {
 
   handleSubmitJwtAuth = ev => {
     ev.preventDefault()
-    console.log(this.state.userType)
     this.setState({ error: null, loading: true })
 
     const { username, password } = ev.target

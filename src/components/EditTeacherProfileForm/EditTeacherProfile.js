@@ -82,7 +82,7 @@ class EditTeacherProfile extends Component {
                     <select id='teacher-sex' name='sex' defaultValue={user.sex} required>
                         <option value='Male'>Male</option>
                         <option value='Female'>Female</option>
-                        <option value='Gender Neutral'>Gender-Neutral</option>
+                        <option value='Others'>Others</option>
                     </select>
 
                     <label htmlFor='teacher-nationality'>Nationality</label>

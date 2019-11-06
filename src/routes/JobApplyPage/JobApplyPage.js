@@ -4,13 +4,16 @@ import SchoolApiService from '../../services/school-api-service'
 import './JobApplyPage.scss'
 import ApplicationApiService from '../../services/application-api-service'
 import UserContext from '../../contexts/UserContext'
+import { Link, withRouter } from 'react-router-dom'
+
 
 class JobApplyPage extends Component {
   static contextType = UserContext
 
   state = {
     job: {},
-    school: {}
+    school: {},
+    toggle: false
   }
 
   handleApplyClick = () => {
@@ -22,6 +25,11 @@ class JobApplyPage extends Component {
 
     ApplicationApiService.postApplication(newApplication)
       .then(console.log)
+
+    this.setState({
+      toggle: true
+    })
+
   }
 
   componentDidMount() {
@@ -41,7 +49,12 @@ class JobApplyPage extends Component {
         <h2>Applying to: {job.job_title}</h2>
         <p>At: {school.school_name}</p>
         <label htmlFor="confirm-apply">Ready to apply?</label>
-        <button onClick={this.handleApplyClick} id="confirm-apply">
+        {this.state.toggle ?
+          <p>Thank you for submitting your application. A staff will review your application and follow up.
+            Click <Link to="/applications">
+              Applications
+              </Link> to view.</p> : <p></p>}
+        <button onClick={this.handleApplyClick} id="confirm-apply" >
           Confirm
         </button>
       </div>
@@ -49,4 +62,4 @@ class JobApplyPage extends Component {
   }
 }
 
-export default JobApplyPage
+export default withRouter(JobApplyPage)
