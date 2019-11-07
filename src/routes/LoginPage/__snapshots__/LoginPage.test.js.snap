@@ -41,18 +41,6 @@ exports[`LoginPage route component renders the UI as expected 1`] = `
           value="teacher"
         />
         <label
-          htmlFor="school"
-        >
-          School
-        </label>
-        <input
-          id="school"
-          name="account-type"
-          onChange={[Function]}
-          type="radio"
-          value="school"
-        />
-        <label
           htmlFor="admin"
         >
           Admin
@@ -82,11 +70,6 @@ exports[`LoginPage route component renders the UI as expected 1`] = `
             value="teacher"
           >
             Teacher
-          </option>
-          <option
-            value="school"
-          >
-            School
           </option>
           <option
             value="admin"

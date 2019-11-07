@@ -2,7 +2,7 @@
 
 .hero {
     height: 100vh;
-    background-image: url('../../assets/china-hero.jpg');
+    background-image: url('../../assets/shanghai-2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -13,13 +13,17 @@
     padding-bottom: 30em;
 
     h2 {
-      color: rgb(230, 230, 230);
+      margin-top: 5em;
+      color: rgba(0, 0, 0, .5);
       font-weight: 500;
+      text-shadow: 1px 1px
     }
 
     h1 {
-      color: $white;
-      font-size: 2.5em;
+      color: $accent-color;
+      font-size: 3em;
+      font-family: 'Dancing Script', cursive;
+      text-shadow: 2px 4px white;
     }
   }
 
@@ -32,19 +36,22 @@
 
     h2 {
       font-size: 1.5em;
+      color: #53A4D3;
     }
 
     p {
       padding-top: 1em;
       font-size: 1.1em;
-      padding-left: 8vw;
-      padding-right: 8vw;
+      margin: auto;
       color: grey;
+      width: 60%;
+      text-align: center;
 
       &:last-child {
         line-height: 1.4em;
         color: black;
-        text-align: center;
+        text-align: justify;
+
       }
     }
   }
@@ -58,6 +65,7 @@
       padding-top: 2em;
       padding-bottom: 2em;
       font-size: 1.5em;
+      color: #53A4D3;
     }
 
     .cards-container {
@@ -67,6 +75,7 @@
     }
 
     .description-card {
+      background: white;
       overflow: hidden;
       width: 80%;
       margin: 10px auto;
@@ -110,6 +119,7 @@
 
     h3 {
       font-size: 1.8em;
+      color: #53A4D3;
     }
 
     a {
@@ -122,14 +132,12 @@
       height: 100vh;
 
       h2 {
-        color: rgb(230, 230, 230);
         font-weight: 500;
         font-size: 1.8em;
       }
 
       h1 {
-        color: $white;
-        font-size: 4em;
+        font-size: 5em;
       }
     }
 

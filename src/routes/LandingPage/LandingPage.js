@@ -33,7 +33,6 @@ class LandingPage extends Component {
                   <h3>Rich History Meets Modernity</h3>
                   <p>With a unique combination of rich history and rapidly growing economic advancement, China is an unmatched treasure trove of cultural beauty, exquisite natural wonders, and unparalleled modern achievements. </p>
                 </div>
-                {/* <img src={collecting} alt="collecting" /> */}
               </div>
             </div>
             <div className="description-card">
@@ -52,13 +51,12 @@ class LandingPage extends Component {
                   <h3>Immerse Yourself</h3>
                   <p>Be more than a teacher. Be more than a tourist. Immerse yourself in a vast tapestry of living history, cultural beauty and modern achievements. Teaching in China is truly the opportunity of a lifetime</p>
                 </div>
-                {/* <img src={calendar} alt="collecting" /> */}
               </div>
             </div>
           </div>
         </section>
         <section id="start">
-          <h3>Start your adventure today</h3>
+          <h3>Start your adventure today!</h3>
           <Link to="/register">Apply - it's free!</Link>
         </section>
       </div>

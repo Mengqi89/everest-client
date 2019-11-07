@@ -1,5 +1,5 @@
-$accent-color: rgb(79, 185, 132);
-$accent-red: rgb(212, 91, 91);
+$accent-color: #4FB984;
+$accent-red: #BA5085;
 $white: rgb(240, 240, 240);
 $black: black;
 $nav-bar-height: 3.4em;
@@ -7,7 +7,8 @@ $border-radius-small: 10px;
 $border-radius-medium: 20px;
 $border-radius-large: 40px;
 $grey-border: #aaa;
-$fancy-font: 'Montserrat';
+$fancy-font: 'Source Sans Pro', sans-serif;
+;
 
 @mixin box-shadow-reg {
   -webkit-box-shadow: -1px 17px 35px -8px rgba(0, 0, 0, 0.24);
@@ -32,7 +33,7 @@ $fancy-font: 'Montserrat';
 }
 
 @mixin green-button($color: $accent-color) {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 500;
   padding: .5em 1em;
   font-size: 1em;
@@ -62,7 +63,8 @@ $fancy-font: 'Montserrat';
   width: 240px;
   height: 30px;
   padding: 10px 20px;
-  font-family: Helvetica, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+
   font-weight: 300;
   font-size: 16px;
   border: 1px solid #aaa;
