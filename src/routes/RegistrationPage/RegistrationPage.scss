@@ -1,7 +1,17 @@
+body {
+  // background-image: url(../../assets/antique.jpg);
+  // background-position: center;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+}
+
 .RegistrationPage {
+  margin-top: 5em;
+  text-align: center;
+  display: inline-block;
+  background: white;
   form {
     display: flex;
     flex-direction: column;
-    
   }
 }

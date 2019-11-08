@@ -1,5 +1,6 @@
-$accent-color: #4FB984;
+$accent-color: #415591;
 $accent-red: #BA5085;
+$accent-brown: #D4B79F;
 $white: rgb(240, 240, 240);
 $black: black;
 $nav-bar-height: 3.4em;
@@ -20,7 +21,7 @@ $fancy-font: 'Source Sans Pro', sans-serif;
 @mixin border-button($color: $accent-color) {
   
   color: $accent-color;
-  border: 1px solid rgb(209, 209, 209);
+  border: 1px solid $accent-color;
   border-radius: 10px;
   padding: .5em 1em;
   cursor: pointer;
@@ -32,7 +33,7 @@ $fancy-font: 'Source Sans Pro', sans-serif;
   }
 }
 
-@mixin green-button($color: $accent-color) {
+@mixin purple-button($color: $accent-color) {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 500;
   padding: .5em 1em;
@@ -40,7 +41,7 @@ $fancy-font: 'Source Sans Pro', sans-serif;
   border: none;
   border-radius: 10px;
   background: $color;
-  color: white;
+  color: $accent-brown;
   text-decoration: none;
   margin-top: 1em;
   -webkit-box-shadow: -1px 17px 35px -8px rgba(0, 0, 0, 0.6);
@@ -53,9 +54,10 @@ $fancy-font: 'Source Sans Pro', sans-serif;
   }
   &:hover {
     transform: translate(4px, 6px);
-    background: rgb(55, 128, 91);
-    color: rgb(199, 199, 199);
+    background: white;
+    color: $accent-color;
     box-shadow: none;
+    border: 1px solid $accent-color;
   }
 }
 

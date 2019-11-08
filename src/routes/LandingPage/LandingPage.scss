@@ -5,7 +5,7 @@
     background-image: url('../../assets/shanghai-2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position-x: right;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +13,7 @@
     padding-bottom: 30em;
 
     h2 {
-      margin-top: 5em;
+      margin-top: 7em;
       color: rgba(0, 0, 0, .5);
       font-weight: 500;
       text-shadow: 1px 1px
@@ -36,7 +36,7 @@
 
     h2 {
       font-size: 1.5em;
-      color: #53A4D3;
+      color: $accent-color;
     }
 
     p {
@@ -65,7 +65,7 @@
       padding-top: 2em;
       padding-bottom: 2em;
       font-size: 1.5em;
-      color: #53A4D3;
+      color: $accent-color;
     }
 
     .cards-container {
@@ -119,17 +119,18 @@
 
     h3 {
       font-size: 1.8em;
-      color: #53A4D3;
+      color: $accent-color;
     }
 
     a {
-      @include green-button;
+      @include purple-button;
     }
   }
 
 @media screen and (min-width: 800px) {
     .hero {
       height: 100vh;
+      background-position: right;
 
       h2 {
         font-weight: 500;

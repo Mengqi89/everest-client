@@ -1,7 +1,7 @@
 @import '../../assets/variables.scss';
 
 .NavBar {
-  background: rgba(0, 0, 0, .45);
+  background: RGBA(212, 183, 159, 0.3);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,7 +11,7 @@
   position: fixed;
   width: 100%;
   top: 0;
-  border-bottom: 1px solid $accent-red;
+  border-bottom: 1px solid $accent-color;
 
   .active {
     color: $accent-color;
