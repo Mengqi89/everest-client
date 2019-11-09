@@ -53,8 +53,8 @@ class EditTeacherProfile extends Component {
     render() {
         const { user, error } = this.context
         return (
-            <div>
-            <h1>Edit Teacher Profile</h1>
+            <div className='edit-teacher-form-container'>
+            <h2>Edit Teacher Profile</h2>
                 
                 <form className='form edit-teacher' onSubmit={(ev) => this.onFormSubmit(ev)}>
                     <div role='alert'>
@@ -76,7 +76,7 @@ class EditTeacherProfile extends Component {
                     <input id='teacher-lastname' type='text' name='last_name' defaultValue={user.last_name} required></input>
 
                     <label htmlFor='teacher-age'>Age</label>
-                    <input id='teacher-age' type='number' name='age' defaultValue={user.age} required></input>
+                    <input id='teacher-age' type='number' name='age' defaultValue={user.age} min='0' required></input>
                             
                     <label htmlFor='teacher-sex'>Gender</label>
                     <select id='teacher-sex' name='sex' defaultValue={user.sex} required>
@@ -130,14 +130,7 @@ class EditTeacherProfile extends Component {
                     </select>
 
                     <label htmlFor='teacher-degree'>Degree</label>
-                    <select id='teacher-degree' name='field_of_degree' defaultValue={user.field_of_degree} required>
-                        <option value='No Degree'>No Degree</option>
-                        <option value='English'>English</option>
-                        <option value='Business'>Business</option>
-                        <option value='Marketing'>Marketing</option>
-                        <option value='Accounting'>Accounting</option>
-                        <option value='Other'>Other</option>
-                    </select>
+                    <input id='teacher-degree' type='text' name='field_of_degree' defaultValue={user.field_of_degree} required></input>
 
                     <label htmlFor='teacher-school'>School Attended</label>
                     <input id='teacher-school' type='text' name='school' defaultValue={user.school}required></input>
@@ -150,13 +143,8 @@ class EditTeacherProfile extends Component {
                         <option value='TEFL/TESOL'>TEFL/TESOL</option>
                     </select>
 
-                    <label htmlFor='teacher-experience'>Years Of Experience</label>
-                    <select id='teacher-experience' name='years_of_experience' defaultValue={user.years_of_experience} required>
-                        <option value='0'>0</option>
-                        <option value='1'>1</option>
-                        <option value='2'>2</option>
-                        <option value='3'>3+</option>
-                    </select>
+                    <label htmlFor='teacher-experience'>Teaching Experience (in years)</label>
+                    <input id='teacher-experience' type='number' name='years_of_experience' defaultValue={user.years_of_experience} min='0' required></input>
 
                     <label htmlFor='teacher-experience-inChina'>Years Of Experience Teaching In China</label>
                     <select id='teacher-experience-inChina' name='years_in_china' defaultValue={user.years_in_china} required>

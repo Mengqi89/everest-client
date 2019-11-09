@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import UserContext from '../../contexts/UserContext'
 import TeacherApiService from '../../services/teacher-api-service'
+import './TeacherProfile.scss'
 
 
 class TeacherProfile extends Component {
