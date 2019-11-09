@@ -14,7 +14,7 @@ class LandingPage extends Component {
       <div className="LandingPage">
         <section className="hero">
           <Typing>
-            <h2>Your Link to</h2>
+            <h2>Your go-to for</h2>
             <h1>Teaching in China</h1>
           </Typing>
         </section>
@@ -39,7 +39,7 @@ class LandingPage extends Component {
               <div className="contents">
                 <img src={chinaOne} alt="" />
                 <div className="description">
-                  <h3>Rapidly Growing City</h3>
+                  <h3>Rapidly Growing Cities</h3>
                   <p>Teaching in China gives you the opportunity to experience everything this country has to offer. The Great Wall and the Terracotta Army. The modern allure of the Pudong Skyline, the 798 Art District and the bustling Victoria Harbor. The ancient beauty of the Potala Palace and the Forbidden City, and so much more.</p>
                 </div>
               </div>

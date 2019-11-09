@@ -18,10 +18,10 @@ $fancy-font: 'Source Sans Pro', sans-serif;
 }
 
 
-@mixin border-button($color: $accent-color) {
+@mixin border-button {
   
-  color: $accent-color;
-  border: 1px solid $accent-color;
+  color: white;
+  border: 2px solid $accent-red;
   border-radius: 10px;
   padding: .5em 1em;
   cursor: pointer;
@@ -30,6 +30,7 @@ $fancy-font: 'Source Sans Pro', sans-serif;
   }
   &:hover {
     background: white;
+    color: $accent-color;
   }
 }
 

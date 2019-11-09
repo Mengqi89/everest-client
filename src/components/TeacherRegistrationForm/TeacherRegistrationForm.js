@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { withRouter } from 'react-router-dom'
 import NationalityList from './NationalityList'
-import './TeacherRegistrationForm.css'
+import './TeacherRegistrationForm.scss'
 import TeacherApiService from '../../services/teacher-api-service'
 // import TokenService from '../../services/token-service'
 
@@ -73,14 +73,14 @@ function TeacherRegistrationForm(props) {
 
     return (
         <section>
-            <h3>Your teaching experience in China begins here!</h3>
+            {/* <h3>Your teaching experience in China begins here!</h3> */}
             <form className='form teacher-registration' onSubmit={handleSubmit}>
                 <div role='alert'>
                     {error && <p className='red'>{error}</p>}
                 </div>
 
                 <label htmlFor='teacher-username'>Username</label>
-                <input id='teacher-usernmae' type='text' name='username' required></input>
+                <input id='teacher-username' type='text' name='username' required></input>
 
                 <label htmlFor='teacher-email'>Email</label>
                 <input id='teacher-email' type='text' name='email' required></input>
@@ -97,7 +97,7 @@ function TeacherRegistrationForm(props) {
                 <input id='teacher-lastname' type='text' name='last_name' required></input>
 
                 <label htmlFor='teacher-age'>Age</label>
-                <input id='teacher-age' type='number' name='age' required></input>
+                <input id='teacher-age' type='number' name='age' min='0' required></input>
 
                 <label htmlFor='teacher-sex'>Gender</label>
                 <select id='teacher-sex' name='sex' required>
@@ -122,7 +122,7 @@ function TeacherRegistrationForm(props) {
                     <option value='Other'>Other</option>
                 </select>
 
-                <label htmlFor='teacher-native-speaker'>Are You A Native Speaker?</label>
+                <label htmlFor='teacher-native-speaker'>Are You a Native Speaker of English?</label>
                 <select id='teacher-native-speaker' name='native_speaker' defaultValue='true' required>
                     <option value='true'>Yes</option>
                     <option value='false'>No</option>
@@ -150,14 +150,7 @@ function TeacherRegistrationForm(props) {
                 </select>
 
                 <label htmlFor='teacher-degree'>Degree</label>
-                <select id='teacher-degree' name='field_of_degree' defaultValue='No Degree' required>
-                    <option value='No Degree'>No Degree</option>
-                    <option value='English'>English</option>
-                    <option value='Business'>Business</option>
-                    <option value='Marketing'>Marketing</option>
-                    <option value='Accounting'>Accounting</option>
-                    <option value='Other'>Other</option>
-                </select>
+                <input id='teacher-degree' type='text' name='field_of_degree' required></input>
 
                 <label htmlFor='teacher-school'>College Attended</label>
                 <input id='teacher-school' type='text' name='school' defaultValue='None' required></input>
@@ -170,13 +163,8 @@ function TeacherRegistrationForm(props) {
                     <option value='TEFL/TESOL'>TEFL/TESOL</option>
                 </select>
 
-                <label htmlFor='teacher-experience'>Teaching Experience</label>
-                <select id='teacher-experience' name='years_of_experience' defaultValue='0' required>
-                    <option value='0'>0</option>
-                    <option value='1'>1</option>
-                    <option value='2'>2</option>
-                    <option value='3'>3+</option>
-                </select>
+                <label htmlFor='teacher-experience'>Teaching Experience (in years)</label>
+                <input id='teacher-experience' type='number' name='years_of_experience' defaultValue='0' min='0' required></input>
 
                 <label htmlFor='teacher-experience-inChina'>Experience Teaching In China</label>
                 <select id='teacher-experience-inChina' name='years_in_china' defaultValue='0' required>
