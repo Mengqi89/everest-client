@@ -24,10 +24,7 @@ class PostJobForm extends Component {
         preferred_experience_level: '',
         native_english_speaker: false,
         other_qualification: null,
-        base_pay_per_month: 0,
         bonuses: false,
-        plane_ticket_provided_to_china: false,
-        plane_ticket_provided_from_china: false,
         plane_ticket_reimbursment: false,
         paid_time_off: false,
         sick_days: 0,
@@ -120,8 +117,8 @@ class PostJobForm extends Component {
                     <label htmlFor='other_qualification'>Is there any other required qualification?</label>
                     <input name='other_qualification' onChange={this.handleUpdateInput} type='text'></input>
 
-                    <label htmlFor='base_pay_per_month'>What is the base pay per month?</label>
-                    <input name='base_pay_per_month' onChange={this.handleUpdateInput} type='number'></input>
+                    {/* <label htmlFor='base_pay_per_month'>What is the base pay per month?</label>
+                    <input name='base_pay_per_month' onChange={this.handleUpdateInput} type='number'></input> */}
 
                     <label htmlFor='bonuses'>Are there any bonuses?</label>
                     <select name='bonuses' defaultValue="true" onChange={this.handleUpdateInput} >
@@ -132,7 +129,7 @@ class PostJobForm extends Component {
                     <label htmlFor='total_salary'>What is the total salary including bonuses?</label>
                     <input required name='total_salary' onChange={this.handleUpdateInput} type='number'></input>
 
-                    <label htmlFor='plane_ticket_provided_to_china'>Is the plane ticket to china provided?</label>
+                    {/* <label htmlFor='plane_ticket_provided_to_china'>Is the plane ticket to china provided?</label>
                     <select name='plane_ticket_provided_to_china' defaultValue="true" onChange={this.handleUpdateInput} >
                         <option value="true">Yes</option>
                         <option value="false">No</option>
@@ -142,7 +139,7 @@ class PostJobForm extends Component {
                     <select name='plane_ticket_provided_from_china' defaultValue="true" onChange={this.handleUpdateInput} >
                         <option value="true">Yes</option>
                         <option value="false">No</option>
-                    </select>
+                    </select> */}
 
                     <label htmlFor='plane_ticket_reimbursment'>If the applicant must purchase their plane ticket, will it be reimbursed?</label>
                     <select name='plane_ticket_reimbursment' defaultValue="true" onChange={this.handleUpdateInput} >

@@ -16,7 +16,7 @@ const schoolKeys = [
   'notable_facts',
   'school_website',
   'apartment_provided',
-  'housing_assistance',
+  'housing_stipend',
   'size_of_housing',
   'shared_room',
   'private_room',
@@ -161,13 +161,13 @@ class EditSchoolForm extends Component {
             <option value="true">Yes</option>
             <option value="false">No</option>
           </select>
-          <label htmlFor="housing_assistance">
-            Does your school assist with housing?{' '}
+          <label htmlFor="housing_stipend">
+            Does your school provide housing stipend?{' '}
           </label>
           <input
             onChange={(ev) => this.handleUpdateInput(ev)}
-            id="housing_assistance"
-            placeholder={user.housingInformation.housing_assistance}
+            id="housing_stipend"
+            placeholder={user.housingInformation.housing_stipend}
             type="text"
           />
           <label htmlFor="size_of_housing">Size and number of rooms: </label>

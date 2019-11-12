@@ -63,10 +63,12 @@ exports[`EditTeacherProfile should render correctly 1`] = `
           }
         }
       >
-        <div>
-          <h1>
+        <div
+          className="edit-teacher-form-container"
+        >
+          <h2>
             Edit Teacher Profile
-          </h1>
+          </h2>
           <form
             className="form edit-teacher"
             onSubmit={[Function]}
@@ -128,6 +130,7 @@ exports[`EditTeacherProfile should render correctly 1`] = `
             </label>
             <input
               id="teacher-age"
+              min="0"
               name="age"
               required={true}
               type="number"
@@ -1311,42 +1314,12 @@ exports[`EditTeacherProfile should render correctly 1`] = `
             >
               Degree
             </label>
-            <select
+            <input
               id="teacher-degree"
               name="field_of_degree"
               required={true}
-            >
-              <option
-                value="No Degree"
-              >
-                No Degree
-              </option>
-              <option
-                value="English"
-              >
-                English
-              </option>
-              <option
-                value="Business"
-              >
-                Business
-              </option>
-              <option
-                value="Marketing"
-              >
-                Marketing
-              </option>
-              <option
-                value="Accounting"
-              >
-                Accounting
-              </option>
-              <option
-                value="Other"
-              >
-                Other
-              </option>
-            </select>
+              type="text"
+            />
             <label
               htmlFor="teacher-school"
             >
@@ -1394,34 +1367,15 @@ exports[`EditTeacherProfile should render correctly 1`] = `
             <label
               htmlFor="teacher-experience"
             >
-              Years Of Experience
+              Teaching Experience (in years)
             </label>
-            <select
+            <input
               id="teacher-experience"
+              min="0"
               name="years_of_experience"
               required={true}
-            >
-              <option
-                value="0"
-              >
-                0
-              </option>
-              <option
-                value="1"
-              >
-                1
-              </option>
-              <option
-                value="2"
-              >
-                2
-              </option>
-              <option
-                value="3"
-              >
-                3+
-              </option>
-            </select>
+              type="number"
+            />
             <label
               htmlFor="teacher-experience-inChina"
             >

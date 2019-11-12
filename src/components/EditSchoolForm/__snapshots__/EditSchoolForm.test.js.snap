@@ -609,15 +609,15 @@ exports[`EditSchoolForm should render correctly 1`] = `
               </option>
             </select>
             <label
-              htmlFor="housing_assistance"
+              htmlFor="housing_stipend"
             >
-              Does your school assist with housing?
+              Does your school provide housing stipend?
                
             </label>
             <input
-              id="housing_assistance"
+              id="housing_stipend"
               onChange={[Function]}
-              placeholder="Will help teacher find housing."
+              placeholder={2000}
               type="text"
             />
             <label

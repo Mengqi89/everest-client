@@ -13,7 +13,7 @@ const SCHOOLS = [
     school_website: 'www.google.com',
     housingInformation: {
       apartment_provided: true,
-      housing_assistance: 'Will help teacher find housing.',
+      housing_stipend: 2000,
       size_of_housing: '2 Bed/2 Bath',
       // "shared_room": true,
       // "private_room": false,
@@ -70,7 +70,7 @@ const SCHOOLS = [
     school_website: 'www.google.com',
     housingInformation: {
       apartment_provided: true,
-      housing_assistance: 'Will help teacher find housing.',
+      housing_stipend: 4000,
       size_of_housing: '2 Bed/2 Bath',
       shared_room: true,
       private_room: false,
