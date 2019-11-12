@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import JobsContext from '../../contexts/JobsContext'
 import JobContainer from '../../components/JobContainer/JobContainer'
-
 import JobsApiService from '../../services/jobs-api-service'
 
 class JobPage extends Component {
@@ -18,9 +17,9 @@ class JobPage extends Component {
     }
 
     render() {
-        return(
-            <>  
-                <JobContainer/>
+        return (
+            <>
+                <JobContainer />
             </>
         )
     }

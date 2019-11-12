@@ -75,8 +75,8 @@ class NavBar extends Component {
             <FontAwesomeIcon icon="clipboard" /> Applications
           </Link>
         </li>}
-        <li onClick={this.handleLogoutClick} className="highlighted-btn">
-          <Link to='/login'>
+        <li onClick={this.handleLogoutClick}>
+          <Link to='/login' className="highlighted-btn">
             Logout
           </Link>
 
