@@ -49,6 +49,7 @@ export default class JobsFilter extends Component {
                             value={gradeLevel}
                             className='form-control'
                             onChange={handleChange}
+                            onClick={setFilter}
                         >
                             <option value='all'>All</option>
                             <option value='kindergarten'>Kindergarten</option>
