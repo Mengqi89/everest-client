@@ -143,11 +143,12 @@ export class JobsProvider extends Component {
 
         //filter by keyword
         if (keyword !== '') {
+            let lowerCaseKeyword = keyword.toLowerCase()
             function includesStr(values, str) {
                 return values.map(function (value) {
-                    return String(value)
+                    return String(value).toLowerCase()
                 }).find(function (value) {
-                    return value.includes(keyword)
+                    return value.includes(lowerCaseKeyword)
                 })
             }
 
