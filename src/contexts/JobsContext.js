@@ -33,11 +33,29 @@ export class JobsProvider extends Component {
         error: null
     }
 
-    filter = (salary, location, gradeLevel, tempJobs) => {
-        return this.checkSalary(salary, location, gradeLevel, tempJobs)
+    filter = (salary, location, gradeLevel, keyword, tempJobs) => {
+        return this.checkSalary(salary, location, gradeLevel, keyword, tempJobs)
     }
 
-    checkGrade = (gradeLevel, tempJobs) => {
+    checkKeyword = (keyword, tempJobs) => {
+        if (keyword !== '') {
+            let lowerCaseKeyword = keyword.toLowerCase()
+            function includesStr(values, str) {
+                return values.map(function (value) {
+                    return String(value).toLowerCase()
+                }).find(function (value) {
+                    return value.includes(lowerCaseKeyword)
+                })
+            }
+
+            tempJobs = tempJobs.filter(function (item) {
+                return includesStr(Object.values(item), keyword)
+            })
+        }
+        return tempJobs
+    }
+
+    checkGrade = (gradeLevel, keyword, tempJobs) => {
         if (gradeLevel !== 'all') {
             if (gradeLevel === 'kindergarten') {
                 tempJobs = tempJobs.filter(jobs => jobs.grade_level.includes('kindergarten'))
@@ -59,21 +77,21 @@ export class JobsProvider extends Component {
                 tempJobs = tempJobs.filter(jobs => jobs.grade_level.includes('college'))
             }
         }
-        return tempJobs
+        return this.checkKeyword(keyword, tempJobs)
     }
 
-    checkLocation = (location, gradeLevel, tempJobs) => {
+    checkLocation = (location, gradeLevel, keyword, tempJobs) => {
         if (location !== '') {
             tempJobs = tempJobs.filter(job => job.location.includes(location))
         }
-        return this.checkGrade(gradeLevel, tempJobs)
+        return this.checkGrade(gradeLevel, keyword, tempJobs)
     }
 
-    checkSalary = (salary, location, gradeLevel, tempJobs) => {
+    checkSalary = (salary, location, gradeLevel, keyword, tempJobs) => {
         if (salary !== 'all') {
             tempJobs = this.state.jobs.filter(job => job.total_salary_lowest >= salary)
         }
-        return this.checkLocation(location, gradeLevel, tempJobs)
+        return this.checkLocation(location, gradeLevel, keyword, tempJobs)
     }
 
     setError = error => {
@@ -139,23 +157,23 @@ export class JobsProvider extends Component {
         let tempJobs = [...jobs]
 
         //recursive filter
-        tempJobs = this.filter(salary, location, gradeLevel, tempJobs)
+        tempJobs = this.filter(salary, location, gradeLevel, keyword, tempJobs)
 
         //filter by keyword
-        if (keyword !== '') {
-            let lowerCaseKeyword = keyword.toLowerCase()
-            function includesStr(values, str) {
-                return values.map(function (value) {
-                    return String(value).toLowerCase()
-                }).find(function (value) {
-                    return value.includes(lowerCaseKeyword)
-                })
-            }
+        // if (keyword !== '') {
+        //     let lowerCaseKeyword = keyword.toLowerCase()
+        //     function includesStr(values, str) {
+        //         return values.map(function (value) {
+        //             return String(value).toLowerCase()
+        //         }).find(function (value) {
+        //             return value.includes(lowerCaseKeyword)
+        //         })
+        //     }
 
-            tempJobs = tempJobs.filter(function (item) {
-                return includesStr(Object.values(item), keyword)
-            })
-        }
+        //     tempJobs = tempJobs.filter(function (item) {
+        //         return includesStr(Object.values(item), keyword)
+        //     })
+        // }
 
         // change state
         this.setState({
