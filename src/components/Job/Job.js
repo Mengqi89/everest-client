@@ -15,15 +15,15 @@ export default function Job(props) {
         }
     }
 
-    const getRandomImg = (imgs) => {
-        return imgs[Math.floor(Math.random() * Math.floor(3))]
-    }
+    // const getRandomImg = (imgs) => {
+    //     return imgs[Math.floor(Math.random() * Math.floor(3))]
+    // }
 
     const { job_id } = props
     const jobLink = `/jobs/${job_id}/apply`
     return (
         <section className='job'>
-            <img src={getRandomImg(imgs)} alt="school" />
+            <img src={imgs} alt="school" />
             <section className='main-info'>
                 <h3>{props.job_title}</h3>
                 <ul>

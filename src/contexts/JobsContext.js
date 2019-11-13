@@ -12,6 +12,7 @@ const JobsContext = React.createContext({
     setError: () => { },
     clearError: () => { },
     setJobsData: () => { },
+    setFilter: () => { },
     filterJobs: () => { },
     handleChange: () => { },
     addJob: () => { },
@@ -30,6 +31,24 @@ export class JobsProvider extends Component {
         gradeLevel: 0,
         location: '',
         error: null
+    }
+
+    filter = (salary, location, tempJobs) => {
+        return this.checkSalary(salary, location, tempJobs)
+    }
+
+    checkLocation = (location, tempJobs) => {
+        if (location !== '') {
+            tempJobs = tempJobs.filter(job => job.location.includes(location))
+        }
+        return tempJobs
+    }
+
+    checkSalary = (salary, location, tempJobs) => {
+        if (salary !== 'all') {
+            tempJobs = this.state.jobs.filter(job => job.total_salary_lowest >= salary)
+        }
+        return this.checkLocation(location, tempJobs)
     }
 
     setError = error => {
@@ -71,12 +90,18 @@ export class JobsProvider extends Component {
             {
                 [name]: value
             }
-
         )
     }
+
+    setFilter = () => {
+        this.setState({
+            filtered: false
+        })
+
+    }
+
     filterJobs = (event) => {
         event.preventDefault()
-
         const {
             jobs,
             keyword,
@@ -88,10 +113,8 @@ export class JobsProvider extends Component {
         //all jobs
         let tempJobs = [...jobs]
 
-        // filter by salary
-        if (salary !== 'all') {
-            tempJobs = tempJobs.filter(jobs => jobs.total_salary >= salary)
-        }
+        tempJobs = this.filter(salary, location, tempJobs)
+
         //filter by grade level
         if (gradeLevel !== 'all') {
             let tempArr = []
@@ -145,19 +168,14 @@ export class JobsProvider extends Component {
 
 
             // //filter by location
-            if (location !== '') {
-                tempJobs = tempJobs.filter(jobs => jobs.location >= location)
-            }
+            // if (location !== '') {
+            //     tempJobs = jobs.filter(job => job.location.includes(location))
+            // }
 
             // change state
             this.setState({
-                filteredJobs: [...tempJobs],
                 filtered: true,
-                keyword: '',
-                salary: 'all',
-                gradeLevel: 'all',
-                location: ''
-
+                filteredJobs: [...tempJobs]
             })
 
 
@@ -181,6 +199,7 @@ export class JobsProvider extends Component {
             handleChange: this.handleChange,
             addJob: this.addJob,
             removeJob: this.removeJob,
+            setFilter: this.setFilter
         }
         return (
             <JobsContext.Provider value={value}>

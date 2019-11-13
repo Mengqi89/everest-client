@@ -13,27 +13,31 @@ export default class JobsFilter extends Component {
             salary,
             gradeLevel,
             location,
-            filterJobs
+            filterJobs,
+            setFilter
         } = this.context
+
+
 
         return (
             <section className='JobsFilter'>
                 <form className='filter-form' onSubmit={filterJobs}>
                     <div className='form-group'>
-                        <label htmlFor='salary'>Salary</label>
+                        <label htmlFor='salary'>Minimum Salary</label>
                         <select
                             name='salary'
                             id='salary'
                             value={salary}
                             className='form-control'
                             onChange={handleChange}
+                            onClick={setFilter}
                         >
                             <option value='all'>All</option>
-                            <option value='7500'>¥7,500-¥9,999</option>
-                            <option value='10000'>¥10,000-¥14,999</option>
-                            <option value='15000'>¥15,000-¥19,999</option>
-                            <option value='20000'>¥20,000-¥24,999</option>
-                            <option value='25000'>¥25,000-¥30,000</option>
+                            <option value='7500'>¥7,500</option>
+                            <option value='10000'>¥10,000</option>
+                            <option value='15000'>¥15,000</option>
+                            <option value='20000'>¥20,000</option>
+                            <option value='25000'>¥25,000</option>
 
                         </select>
                     </div>
@@ -61,6 +65,7 @@ export default class JobsFilter extends Component {
                             name="keyword"
                             placeholder="Ex: kindergarten..."
                             onChange={handleChange}
+                            onClick={setFilter}
                             value={keyword}
                         />
                     </div>
@@ -71,11 +76,12 @@ export default class JobsFilter extends Component {
                             name="location"
                             placeholder="Ex: Shanghai..."
                             onChange={handleChange}
+                            onClick={setFilter}
                             value={location}
                         />
                     </div>
+                    <button type='submit'>Search</button>
                 </form>
-                <button type='submit'>Search</button>
             </section>
         )
     }
