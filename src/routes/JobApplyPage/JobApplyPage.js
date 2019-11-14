@@ -43,14 +43,13 @@ class JobApplyPage extends Component {
 
   render() {
 
-    const { job, school } = this.state
+    const { job } = this.state
     return (
       <div className="JobApplyPage">
         <h2>Applying to: {job.job_title}</h2>
-        <p>At: {school.school_name}</p>
         <label htmlFor="confirm-apply">Ready to apply?</label>
         {this.state.toggle ?
-          <p>Thank you for submitting your application. A staff will review your application and follow up.
+          <p className='red'>Thank you for submitting your application. A staff will review your application and follow up.
             Click <Link to="/applications">
               Applications
               </Link> to view.</p> : <p></p>}

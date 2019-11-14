@@ -56,14 +56,14 @@ class Application extends Component {
                 <div className="application">
                     <div className="profile">
                         <h3>School Profile</h3>
-                        <div>Name: {application.school_name}</div>
+                        <div>School Name: {application.school_name}</div>
                         <div>Job Title: {application.job_title}</div>
-                        <div>Free Housing: {application.apartment_provided === true ? "Yes" : "No"}  </div>
                     </div>
                     <div className="profile">
                         <h3>Teacher Profile</h3>
                         <div>Name: {application.first_name} {application.last_name}</div>
                         <div>Age: {application.age}</div>
+                        <div>Teaching Experience: {application.years_of_experience} {application.years_of_experience === 1 ? 'year' : 'years'}</div>
                     </div>
 
                 </div>

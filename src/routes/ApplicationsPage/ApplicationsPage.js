@@ -16,7 +16,7 @@ class ApplicationsPage extends Component {
     const { userType } = this.context
     return (
       <div className="ApplicationsPage">
-        <h2>View Applications</h2>
+        <h2>Applications</h2>
         {userType === 'admin' && <AdminApplications />}
         {/* {userType === 'school' && <SchoolApplications />} */}
         {userType === 'teacher' && <TeacherApplications />}

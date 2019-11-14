@@ -1,25 +1,26 @@
 @import '../../assets/variables.scss';
 
 .Application {
+    margin-top: 5em;
     h2 {
         padding: 1em;
         margin-bottom: 1em;
-        // color: $accent-red;
         text-align: center;
         }
     
     .application {
         padding: 1em;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: center;
     }
     
     .profile {
         padding: 1em;
-        width: 40%;
+        width: 90%;
         text-align: left;
         background: $white;
+        margin: auto;
         @include box-shadow-reg;
         h3 {
             padding: 1em 0;
@@ -40,3 +41,15 @@
     }
 }
 
+@media screen and (min-width: 600px) {
+    .Application {
+
+        .application {
+            flex-direction: row;
+        }
+
+        .profile {
+            width: 35%;
+        }
+    }
+}

@@ -1,13 +1,13 @@
 @import '../../assets/variables.scss';
 
 .ApplicationsPage {
-    margin-top: 5em;
+    margin: 5em 2em;
     display: flex;
     flex-direction: column;
     text-align: center;
+
     h2 {
     margin-bottom: 1em;
-    // color: $accent-red;
     }
 }
 
@@ -23,7 +23,6 @@
     .ApplicationCard {
         background: $white;
         margin: 2em 0em;
-        // width: 25vw;
         @include border-button;
     }
 

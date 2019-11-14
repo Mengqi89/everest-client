@@ -1,11 +1,20 @@
 @import '../../assets/variables.scss';
 
 .JobApplyPage {
+  padding-top: 8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+
   button {
     @include purple-button;
+    width: 30%;
+    margin: 1em auto;
   }
 }
-
 
 #confirmation {
   display: none;

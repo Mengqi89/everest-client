@@ -25,12 +25,14 @@ export default class JobsListPage extends Component {
     }
     render() {
         const { filtered } = this.props
+        const { jobs } = this.props
         return (
             <section className='jobslist'>
                 <div className='jobslist-center'>
+                    {!!jobs ? (<div></div>) : (<div>Loading</div>)}
                     {(!!filtered) ? ((this.props.filteredJobs.length !== 0) ? this.renderFilteredJobs() : this.renderEmptyResults()) : this.renderJobs()}
                 </div>
-            </section>
+            </section >
         )
 
     }

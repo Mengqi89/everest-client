@@ -12,14 +12,21 @@ class TeacherProfile extends Component {
             .then(profile => this.context.setUser(profile))
     }
 
+
     render() {
         const { user } = this.context
+
         return (
             <div className="TeacherProfile">
-                <h2>Teacher Info</h2>
+                <h2>{user.first_name} {user.last_name}</h2>
                 <ul>
-                    <li>Name: {user.first_name} {user.last_name}</li>
-                    <li>Username: {user.username}</li>
+                    <li>Username: <span>{user.username}</span></li>
+                    <li>Age: <span>{user.age}</span></li>
+                    <li>Email: <span>{user.email}</span></li>
+                    <li>Nationality: <span>{user.nationality}</span></li>
+                    <li>Race: <span>{user.race}</span></li>
+                    <li>School Attended: <span>{user.school}</span></li>
+                    <li>Teaching Experience: <span>{user.years_of_experience} {user.years_of_experience === 1 ? 'year' : 'years'}</span></li>
                 </ul >
             </div>
 
