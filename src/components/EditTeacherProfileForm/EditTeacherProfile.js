@@ -21,13 +21,20 @@ class EditTeacherProfile extends Component {
         ev.preventDefault()
         const { id } = this.context.user
 
-        const { username, first_name, last_name, age, sex, race, nationality, native_speaker,
+        const { username, password, password_match, first_name, last_name, age, sex, race, nationality, native_speaker,
             married, highest_degree, field_of_degree, school, certification, years_of_experience,
             years_in_china, years_teaching_abroad } = ev.target
+        
+        //check password match
+        if (password.value !== password_match.value) { 
+            console.log(password.value, password_match.value)
+            const err = 'Passwords do not match.'
+            return this.context.setError(err)
+        }
 
         const updatedTeacher = {
             username: username.value,
-            // password: password.value,
+            password: password.value,
             first_name: first_name.value,
             last_name: last_name.value,
             age: age.value,
@@ -62,11 +69,6 @@ class EditTeacherProfile extends Component {
 
                     <label htmlFor='teacher-username'>Enter a Username</label>
                     <input id='teacher-username' type='text' name='username' defaultValue={user.username} required></input>
-
-                    {/* <label htmlFor='teacher-password'>Enter a Password</label>
-                    <input id='teacher-password' type='password' 
-                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more 
-                    characters" name='password' placeholder='please enter password' required></input> */}
 
                     <label htmlFor='teacher-firstname'>First Name</label>
                     <input id='teacher-firstname' type='text' name='first_name' defaultValue={user.first_name} required></input>
@@ -109,9 +111,9 @@ class EditTeacherProfile extends Component {
                     <label htmlFor='teacher-married'>Marriage Satus</label>
                     <select id='teacher-married' name='married' defaultValue={user.married} required>
                         <option value="" disabled>--select one--</option>
-                        <option value='Married'>married</option>
-                        <option value='Single'>single</option>
-                        <option value='Domestic-partner'>domestic partner</option>
+                        <option value='Married'>Married</option>
+                        <option value='Single'>Single</option>
+                        <option value='Domestic-partner'>Domestic Partner</option>
 
                     </select>
 
@@ -160,6 +162,16 @@ class EditTeacherProfile extends Component {
                         <option value='2'>2</option>
                         <option value='3'>3+</option>
                     </select>
+
+                     <label htmlFor='teacher-password'>Enter Existing Password or a New Password</label>
+                    <input id='teacher-password' type='password' 
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more 
+                    characters" name='password' placeholder='please enter password' required></input>
+
+                     <label htmlFor='teacher-password-match'>Re-enter Password</label>
+                    <input id='teacher-password-match' type='password' 
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more 
+                    characters" name='password_match' placeholder='please re-enter password' required></input>
 
                     <button type='submit'>Submit</button>
                 </form>
