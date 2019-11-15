@@ -6,7 +6,7 @@ import AdminApiService from '../../services/admin-api-service'
 import './LoginForm.scss'
 import TeacherApiService from '../../services/teacher-api-service'
 import UserContext from '../../contexts/UserContext'
-import LoadingSpinner from '../Utils/LoadingSpinner/LoadingSpinner';
+import LoadingSpinner from '../Utils/LoadingSpinner/LoadingSpinner'
 
 class LoginForm extends Component {
   static contextType = UserContext

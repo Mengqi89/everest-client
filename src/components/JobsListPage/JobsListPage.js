@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Job from '../Job/Job'
+import './JobsListPage.scss'
 
 
 export default class JobsListPage extends Component {
@@ -19,17 +20,18 @@ export default class JobsListPage extends Component {
     renderEmptyResults() {
         return (
             <>
-                <h1>There were no jobs found!</h1>
+                <div className='no-job'>There were no jobs found!</div>
             </>
         )
     }
     render() {
         const { filtered } = this.props
-        const { jobs } = this.props
+        // const { jobs } = this.props
         return (
             <section className='jobslist'>
+                {/* {!!jobs ? (<div></div>) : (<div>Loading2</div>)} */}
                 <div className='jobslist-center'>
-                    {!!jobs ? (<div></div>) : (<div>Loading</div>)}
+
                     {(!!filtered) ? ((this.props.filteredJobs.length !== 0) ? this.renderFilteredJobs() : this.renderEmptyResults()) : this.renderJobs()}
                 </div>
             </section >

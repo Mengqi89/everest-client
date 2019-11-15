@@ -2,7 +2,7 @@
 
 
 
-.jobsListPage {
+jobsListPage {
     * {
     box-sizing: border-box;
   }
@@ -37,3 +37,9 @@
       margin-right: auto;
   }
 }
+
+  .no-job {
+    text-align: center;
+    color: red;
+    font-size: 2em;
+  }

@@ -12,7 +12,6 @@ class TeacherProfile extends Component {
             .then(profile => this.context.setUser(profile))
     }
 
-
     render() {
         const { user } = this.context
 
