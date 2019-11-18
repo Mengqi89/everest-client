@@ -80,20 +80,20 @@
 }
 
 #title {
-  text-decoration: none;
+  text-decoration: underline;
   color: $accent-color;
-  outline: solid 0.5px;
   padding: 0.5em;
 }
 
 #title:hover {
   background: $accent-color;
   color: $accent-brown;
+  text-decoration: none;
 }
 
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
   .job {
     display: flex;
     justify-content:space-between ;
@@ -110,5 +110,11 @@
         height: 17vw;
         width: auto;
       }
+  }
+
+  #title {
+    text-decoration: none;
+    border: solid 0.5px;
+    border-radius: 3px;
   }
 }
