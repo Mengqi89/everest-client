@@ -18,6 +18,7 @@ class LandingPage extends Component {
           <Typing>
             <h2>Your go-to for</h2>
             <h1>Teaching in China</h1>
+
           </Typing>
         </section>
         <section id="why-everest">

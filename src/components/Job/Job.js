@@ -25,7 +25,7 @@ export default function Job(props) {
         <section className='job'>
             <img src={imgs} alt="school" />
             <section className='main-info'>
-                <h3>{props.job_title}</h3>
+                <h3><a href={props.full_description} id='title'>{props.job_title}</a></h3>
                 <ul>
                     <li>Vacancies:  {props.vacancies}</li>
                     <li>Course: {props.course}</li>
@@ -41,7 +41,7 @@ export default function Job(props) {
                 {/* <FontAwesomeIcon className='bounce arrowDown' icon={faArrowCircleDown} onClick={toggleHidden}>More details</FontAwesomeIcon> */}
                 <div className='arrow bounce' onClick={() => toggleHidden(props.job_id)}></div>
             </section>
-            <Link to={jobLink}>Apply</Link>
+            <Link id='apply-button' to={jobLink}>Apply</Link>
         </section>
     )
 }
