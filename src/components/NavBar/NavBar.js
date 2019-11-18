@@ -123,8 +123,7 @@ class NavBar extends Component {
             <Link to="/">
               <h1>
                 <img src={logo} alt="logo" id="logo" />
-                Everest
-            </h1>
+              </h1>
             </Link>
           </ul>
           <ul className="nav-links">

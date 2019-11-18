@@ -27,6 +27,11 @@
     }
   }
 
+  #logo-blue {
+    height: 15vh;
+  }    
+
+
   #why-everest {
     display: flex;
     flex-direction: column;
@@ -141,6 +146,10 @@
         font-size: 5em;
       }
     }
+
+      #logo-blue {
+        height: 20vh;
+  }    
 
     #why-everest h2 {
       font-size: 2em;

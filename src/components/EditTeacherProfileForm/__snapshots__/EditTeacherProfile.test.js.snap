@@ -89,19 +89,6 @@ exports[`EditTeacherProfile should render correctly 1`] = `
               type="text"
             />
             <label
-              htmlFor="teacher-password"
-            >
-              Enter a Password
-            </label>
-            <input
-              id="teacher-password"
-              name="password"
-              placeholder="please enter password"
-              required={true}
-              title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more  characters"
-              type="password"
-            />
-            <label
               htmlFor="teacher-firstname"
             >
               First Name
@@ -180,962 +167,962 @@ exports[`EditTeacherProfile should render correctly 1`] = `
                   -- select one --
                 </option>
                 <option
-                  value="afghan"
+                  value="Afghan"
                 >
                   Afghan
                 </option>
                 <option
-                  value="albanian"
+                  value="Albanian"
                 >
                   Albanian
                 </option>
                 <option
-                  value="algerian"
+                  value="Algerian"
                 >
                   Algerian
                 </option>
                 <option
-                  value="american"
+                  value="American"
                 >
                   American
                 </option>
                 <option
-                  value="andorran"
+                  value="Andorran"
                 >
                   Andorran
                 </option>
                 <option
-                  value="angolan"
+                  value="Angolan"
                 >
                   Angolan
                 </option>
                 <option
-                  value="antiguans"
+                  value="Antiguans"
                 >
                   Antiguans
                 </option>
                 <option
-                  value="argentinean"
+                  value="Argentinean"
                 >
                   Argentinean
                 </option>
                 <option
-                  value="armenian"
+                  value="Armenian"
                 >
                   Armenian
                 </option>
                 <option
-                  value="australian"
+                  value="Australian"
                 >
                   Australian
                 </option>
                 <option
-                  value="austrian"
+                  value="Austrian"
                 >
                   Austrian
                 </option>
                 <option
-                  value="azerbaijani"
+                  value="Azerbaijani"
                 >
                   Azerbaijani
                 </option>
                 <option
-                  value="bahamian"
+                  value="Bahamian"
                 >
                   Bahamian
                 </option>
                 <option
-                  value="bahraini"
+                  value="Bahraini"
                 >
                   Bahraini
                 </option>
                 <option
-                  value="bangladeshi"
+                  value="Bangladeshi"
                 >
                   Bangladeshi
                 </option>
                 <option
-                  value="barbadian"
+                  value="Barbadian"
                 >
                   Barbadian
                 </option>
                 <option
-                  value="barbudans"
+                  value="Barbudans"
                 >
                   Barbudans
                 </option>
                 <option
-                  value="batswana"
+                  value="Batswana"
                 >
                   Batswana
                 </option>
                 <option
-                  value="belarusian"
+                  value="Belarusian"
                 >
                   Belarusian
                 </option>
                 <option
-                  value="belgian"
+                  value="Belgian"
                 >
                   Belgian
                 </option>
                 <option
-                  value="belizean"
+                  value="Belizean"
                 >
                   Belizean
                 </option>
                 <option
-                  value="beninese"
+                  value="Beninese"
                 >
                   Beninese
                 </option>
                 <option
-                  value="bhutanese"
+                  value="Bhutanese"
                 >
                   Bhutanese
                 </option>
                 <option
-                  value="bolivian"
+                  value="Bolivian"
                 >
                   Bolivian
                 </option>
                 <option
-                  value="bosnian"
+                  value="Bosnian"
                 >
                   Bosnian
                 </option>
                 <option
-                  value="brazilian"
+                  value="Brazilian"
                 >
                   Brazilian
                 </option>
                 <option
-                  value="british"
+                  value="British"
                 >
                   British
                 </option>
                 <option
-                  value="bruneian"
+                  value="Bruneian"
                 >
                   Bruneian
                 </option>
                 <option
-                  value="bulgarian"
+                  value="Bulgarian"
                 >
                   Bulgarian
                 </option>
                 <option
-                  value="burkinabe"
+                  value="Burkinabe"
                 >
                   Burkinabe
                 </option>
                 <option
-                  value="burmese"
+                  value="Burmese"
                 >
                   Burmese
                 </option>
                 <option
-                  value="burundian"
+                  value="Burundian"
                 >
                   Burundian
                 </option>
                 <option
-                  value="cambodian"
+                  value="Cambodian"
                 >
                   Cambodian
                 </option>
                 <option
-                  value="cameroonian"
+                  value="Cameroonian"
                 >
                   Cameroonian
                 </option>
                 <option
-                  value="canadian"
+                  value="Canadian"
                 >
                   Canadian
                 </option>
                 <option
-                  value="cape verdean"
+                  value="Cape verdean"
                 >
                   Cape Verdean
                 </option>
                 <option
-                  value="central african"
+                  value="Central african"
                 >
                   Central African
                 </option>
                 <option
-                  value="chadian"
+                  value="Chadian"
                 >
                   Chadian
                 </option>
                 <option
-                  value="chilean"
+                  value="Chilean"
                 >
                   Chilean
                 </option>
                 <option
-                  value="chinese"
+                  value="Chinese"
                 >
                   Chinese
                 </option>
                 <option
-                  value="colombian"
+                  value="Colombian"
                 >
                   Colombian
                 </option>
                 <option
-                  value="comoran"
+                  value="Comoran"
                 >
                   Comoran
                 </option>
                 <option
-                  value="congolese"
+                  value="Congolese"
                 >
                   Congolese
                 </option>
                 <option
-                  value="costa rican"
+                  value="Costa Rican"
                 >
                   Costa Rican
                 </option>
                 <option
-                  value="croatian"
+                  value="Croatian"
                 >
                   Croatian
                 </option>
                 <option
-                  value="cuban"
+                  value="Cuban"
                 >
                   Cuban
                 </option>
                 <option
-                  value="cypriot"
+                  value="Cypriot"
                 >
                   Cypriot
                 </option>
                 <option
-                  value="czech"
+                  value="Czech"
                 >
                   Czech
                 </option>
                 <option
-                  value="danish"
+                  value="Danish"
                 >
                   Danish
                 </option>
                 <option
-                  value="djibouti"
+                  value="Djibouti"
                 >
                   Djibouti
                 </option>
                 <option
-                  value="dominican"
+                  value="Dominican"
                 >
                   Dominican
                 </option>
                 <option
-                  value="dutch"
+                  value="Dutch"
                 >
                   Dutch
                 </option>
                 <option
-                  value="east timorese"
+                  value="East Timorese"
                 >
                   East Timorese
                 </option>
                 <option
-                  value="ecuadorean"
+                  value="Ecuadorean"
                 >
                   Ecuadorean
                 </option>
                 <option
-                  value="egyptian"
+                  value="Egyptian"
                 >
                   Egyptian
                 </option>
                 <option
-                  value="emirian"
+                  value="Emirian"
                 >
                   Emirian
                 </option>
                 <option
-                  value="equatorial guinean"
+                  value="Equatorial Guinean"
                 >
                   Equatorial Guinean
                 </option>
                 <option
-                  value="eritrean"
+                  value="Eritrean"
                 >
                   Eritrean
                 </option>
                 <option
-                  value="estonian"
+                  value="Estonian"
                 >
                   Estonian
                 </option>
                 <option
-                  value="ethiopian"
+                  value="Ethiopian"
                 >
                   Ethiopian
                 </option>
                 <option
-                  value="fijian"
+                  value="Fijian"
                 >
                   Fijian
                 </option>
                 <option
-                  value="filipino"
+                  value="Filipino"
                 >
                   Filipino
                 </option>
                 <option
-                  value="finnish"
+                  value="Finnish"
                 >
                   Finnish
                 </option>
                 <option
-                  value="french"
+                  value="French"
                 >
                   French
                 </option>
                 <option
-                  value="gabonese"
+                  value="Gabonese"
                 >
                   Gabonese
                 </option>
                 <option
-                  value="gambian"
+                  value="Gambian"
                 >
                   Gambian
                 </option>
                 <option
-                  value="georgian"
+                  value="Georgian"
                 >
                   Georgian
                 </option>
                 <option
-                  value="german"
+                  value="German"
                 >
                   German
                 </option>
                 <option
-                  value="ghanaian"
+                  value="Ghanaian"
                 >
                   Ghanaian
                 </option>
                 <option
-                  value="greek"
+                  value="Greek"
                 >
                   Greek
                 </option>
                 <option
-                  value="grenadian"
+                  value="Grenadian"
                 >
                   Grenadian
                 </option>
                 <option
-                  value="guatemalan"
+                  value="Guatemalan"
                 >
                   Guatemalan
                 </option>
                 <option
-                  value="guinea-bissauan"
+                  value="Guinea-Bissauan"
                 >
                   Guinea-Bissauan
                 </option>
                 <option
-                  value="guinean"
+                  value="Guinean"
                 >
                   Guinean
                 </option>
                 <option
-                  value="guyanese"
+                  value="Guyanese"
                 >
                   Guyanese
                 </option>
                 <option
-                  value="haitian"
+                  value="Haitian"
                 >
                   Haitian
                 </option>
                 <option
-                  value="herzegovinian"
+                  value="Herzegovinian"
                 >
                   Herzegovinian
                 </option>
                 <option
-                  value="honduran"
+                  value="Honduran"
                 >
                   Honduran
                 </option>
                 <option
-                  value="hungarian"
+                  value="Hungarian"
                 >
                   Hungarian
                 </option>
                 <option
-                  value="icelander"
+                  value="Icelander"
                 >
                   Icelander
                 </option>
                 <option
-                  value="indian"
+                  value="Indian"
                 >
                   Indian
                 </option>
                 <option
-                  value="indonesian"
+                  value="Indonesian"
                 >
                   Indonesian
                 </option>
                 <option
-                  value="iranian"
+                  value="Iranian"
                 >
                   Iranian
                 </option>
                 <option
-                  value="iraqi"
+                  value="Iraqi"
                 >
                   Iraqi
                 </option>
                 <option
-                  value="irish"
+                  value="Irish"
                 >
                   Irish
                 </option>
                 <option
-                  value="israeli"
+                  value="Israeli"
                 >
                   Israeli
                 </option>
                 <option
-                  value="italian"
+                  value="Italian"
                 >
                   Italian
                 </option>
                 <option
-                  value="ivorian"
+                  value="Ivorian"
                 >
                   Ivorian
                 </option>
                 <option
-                  value="jamaican"
+                  value="Jamaican"
                 >
                   Jamaican
                 </option>
                 <option
-                  value="japanese"
+                  value="Japanese"
                 >
                   Japanese
                 </option>
                 <option
-                  value="jordanian"
+                  value="Jordanian"
                 >
                   Jordanian
                 </option>
                 <option
-                  value="kazakhstani"
+                  value="Kazakhstani"
                 >
                   Kazakhstani
                 </option>
                 <option
-                  value="kenyan"
+                  value="Kenyan"
                 >
                   Kenyan
                 </option>
                 <option
-                  value="kittian and nevisian"
+                  value="Kittian and Nevisian"
                 >
                   Kittian and Nevisian
                 </option>
                 <option
-                  value="kuwaiti"
+                  value="Kuwaiti"
                 >
                   Kuwaiti
                 </option>
                 <option
-                  value="kyrgyz"
+                  value="Kyrgyz"
                 >
                   Kyrgyz
                 </option>
                 <option
-                  value="laotian"
+                  value="Laotian"
                 >
                   Laotian
                 </option>
                 <option
-                  value="latvian"
+                  value="Latvian"
                 >
                   Latvian
                 </option>
                 <option
-                  value="lebanese"
+                  value="Lebanese"
                 >
                   Lebanese
                 </option>
                 <option
-                  value="liberian"
+                  value="Liberian"
                 >
                   Liberian
                 </option>
                 <option
-                  value="libyan"
+                  value="Libyan"
                 >
                   Libyan
                 </option>
                 <option
-                  value="liechtensteiner"
+                  value="Liechtensteiner"
                 >
                   Liechtensteiner
                 </option>
                 <option
-                  value="lithuanian"
+                  value="Lithuanian"
                 >
                   Lithuanian
                 </option>
                 <option
-                  value="luxembourger"
+                  value="Luxembourger"
                 >
                   Luxembourger
                 </option>
                 <option
-                  value="macedonian"
+                  value="Macedonian"
                 >
                   Macedonian
                 </option>
                 <option
-                  value="malagasy"
+                  value="Malagasy"
                 >
                   Malagasy
                 </option>
                 <option
-                  value="malawian"
+                  value="Malawian"
                 >
                   Malawian
                 </option>
                 <option
-                  value="malaysian"
+                  value="Malaysian"
                 >
                   Malaysian
                 </option>
                 <option
-                  value="maldivan"
+                  value="Maldivan"
                 >
                   Maldivan
                 </option>
                 <option
-                  value="malian"
+                  value="Malian"
                 >
                   Malian
                 </option>
                 <option
-                  value="maltese"
+                  value="Maltese"
                 >
                   Maltese
                 </option>
                 <option
-                  value="marshallese"
+                  value="Marshallese"
                 >
                   Marshallese
                 </option>
                 <option
-                  value="mauritanian"
+                  value="Mauritanian"
                 >
                   Mauritanian
                 </option>
                 <option
-                  value="mauritian"
+                  value="Mauritian"
                 >
                   Mauritian
                 </option>
                 <option
-                  value="mexican"
+                  value="Mexican"
                 >
                   Mexican
                 </option>
                 <option
-                  value="micronesian"
+                  value="Micronesian"
                 >
                   Micronesian
                 </option>
                 <option
-                  value="moldovan"
+                  value="Moldovan"
                 >
                   Moldovan
                 </option>
                 <option
-                  value="monacan"
+                  value="Monacan"
                 >
                   Monacan
                 </option>
                 <option
-                  value="mongolian"
+                  value="Mongolian"
                 >
                   Mongolian
                 </option>
                 <option
-                  value="moroccan"
+                  value="Moroccan"
                 >
                   Moroccan
                 </option>
                 <option
-                  value="mosotho"
+                  value="Mosotho"
                 >
                   Mosotho
                 </option>
                 <option
-                  value="motswana"
+                  value="Motswana"
                 >
                   Motswana
                 </option>
                 <option
-                  value="mozambican"
+                  value="Mozambican"
                 >
                   Mozambican
                 </option>
                 <option
-                  value="namibian"
+                  value="Namibian"
                 >
                   Namibian
                 </option>
                 <option
-                  value="nauruan"
+                  value="Nauruan"
                 >
                   Nauruan
                 </option>
                 <option
-                  value="nepalese"
+                  value="Nepalese"
                 >
                   Nepalese
                 </option>
                 <option
-                  value="new zealander"
+                  value="New Zealander"
                 >
                   New Zealander
                 </option>
                 <option
-                  value="ni-vanuatu"
+                  value="Ni-Vanuatu"
                 >
                   Ni-Vanuatu
                 </option>
                 <option
-                  value="nicaraguan"
+                  value="Nicaraguan"
                 >
                   Nicaraguan
                 </option>
                 <option
-                  value="nigerien"
+                  value="Nigerien"
                 >
                   Nigerien
                 </option>
                 <option
-                  value="north korean"
+                  value="North Korean"
                 >
                   North Korean
                 </option>
                 <option
-                  value="northern irish"
+                  value="Northern irish"
                 >
                   Northern Irish
                 </option>
                 <option
-                  value="norwegian"
+                  value="Norwegian"
                 >
                   Norwegian
                 </option>
                 <option
-                  value="omani"
+                  value="Omani"
                 >
                   Omani
                 </option>
                 <option
-                  value="pakistani"
+                  value="Pakistani"
                 >
                   Pakistani
                 </option>
                 <option
-                  value="palauan"
+                  value="Palauan"
                 >
                   Palauan
                 </option>
                 <option
-                  value="panamanian"
+                  value="Panamanian"
                 >
                   Panamanian
                 </option>
                 <option
-                  value="papua new guinean"
+                  value="Papua New Guinean"
                 >
                   Papua New Guinean
                 </option>
                 <option
-                  value="paraguayan"
+                  value="Paraguayan"
                 >
                   Paraguayan
                 </option>
                 <option
-                  value="peruvian"
+                  value="Peruvian"
                 >
                   Peruvian
                 </option>
                 <option
-                  value="polish"
+                  value="Polish"
                 >
                   Polish
                 </option>
                 <option
-                  value="portuguese"
+                  value="Portuguese"
                 >
                   Portuguese
                 </option>
                 <option
-                  value="qatari"
+                  value="Qatari"
                 >
                   Qatari
                 </option>
                 <option
-                  value="romanian"
+                  value="Romanian"
                 >
                   Romanian
                 </option>
                 <option
-                  value="russian"
+                  value="Russian"
                 >
                   Russian
                 </option>
                 <option
-                  value="rwandan"
+                  value="Rwandan"
                 >
                   Rwandan
                 </option>
                 <option
-                  value="saint lucian"
+                  value="Saint Lucian"
                 >
                   Saint Lucian
                 </option>
                 <option
-                  value="salvadoran"
+                  value="Salvadoran"
                 >
                   Salvadoran
                 </option>
                 <option
-                  value="samoan"
+                  value="Samoan"
                 >
                   Samoan
                 </option>
                 <option
-                  value="san marinese"
+                  value="San Marinese"
                 >
                   San Marinese
                 </option>
                 <option
-                  value="sao tomean"
+                  value="Sao Tomean"
                 >
                   Sao Tomean
                 </option>
                 <option
-                  value="saudi"
+                  value="Saudi"
                 >
                   Saudi
                 </option>
                 <option
-                  value="scottish"
+                  value="Scottish"
                 >
                   Scottish
                 </option>
                 <option
-                  value="senegalese"
+                  value="Senegalese"
                 >
                   Senegalese
                 </option>
                 <option
-                  value="serbian"
+                  value="Serbian"
                 >
                   Serbian
                 </option>
                 <option
-                  value="seychellois"
+                  value="Seychellois"
                 >
                   Seychellois
                 </option>
                 <option
-                  value="sierra leonean"
+                  value="Sierra Leonean"
                 >
                   Sierra Leonean
                 </option>
                 <option
-                  value="singaporean"
+                  value="Singaporean"
                 >
                   Singaporean
                 </option>
                 <option
-                  value="slovakian"
+                  value="Slovakian"
                 >
                   Slovakian
                 </option>
                 <option
-                  value="slovenian"
+                  value="Slovenian"
                 >
                   Slovenian
                 </option>
                 <option
-                  value="solomon islander"
+                  value="Solomon Islander"
                 >
                   Solomon Islander
                 </option>
                 <option
-                  value="somali"
+                  value="Somali"
                 >
                   Somali
                 </option>
                 <option
-                  value="south african"
+                  value="South african"
                 >
                   South African
                 </option>
                 <option
-                  value="south korean"
+                  value="South korean"
                 >
                   South Korean
                 </option>
                 <option
-                  value="spanish"
+                  value="Spanish"
                 >
                   Spanish
                 </option>
                 <option
-                  value="sri lankan"
+                  value="Sri Lankan"
                 >
                   Sri Lankan
                 </option>
                 <option
-                  value="sudanese"
+                  value="Sudanese"
                 >
                   Sudanese
                 </option>
                 <option
-                  value="surinamer"
+                  value="Surinamer"
                 >
                   Surinamer
                 </option>
                 <option
-                  value="swazi"
+                  value="Swazi"
                 >
                   Swazi
                 </option>
                 <option
-                  value="swedish"
+                  value="Swedish"
                 >
                   Swedish
                 </option>
                 <option
-                  value="swiss"
+                  value="Swiss"
                 >
                   Swiss
                 </option>
                 <option
-                  value="syrian"
+                  value="Syrian"
                 >
                   Syrian
                 </option>
                 <option
-                  value="taiwanese"
+                  value="Taiwanese"
                 >
                   Taiwanese
                 </option>
                 <option
-                  value="tajik"
+                  value="Tajik"
                 >
                   Tajik
                 </option>
                 <option
-                  value="tanzanian"
+                  value="Tanzanian"
                 >
                   Tanzanian
                 </option>
                 <option
-                  value="thai"
+                  value="Thai"
                 >
                   Thai
                 </option>
                 <option
-                  value="togolese"
+                  value="Togolese"
                 >
                   Togolese
                 </option>
                 <option
-                  value="tongan"
+                  value="Tongan"
                 >
                   Tongan
                 </option>
                 <option
-                  value="trinidadian or tobagonian"
+                  value="Trinidadian or Tobagonian"
                 >
                   Trinidadian or Tobagonian
                 </option>
                 <option
-                  value="tunisian"
+                  value="Tunisian"
                 >
                   Tunisian
                 </option>
                 <option
-                  value="turkish"
+                  value="Turkish"
                 >
                   Turkish
                 </option>
                 <option
-                  value="tuvaluan"
+                  value="Tuvaluan"
                 >
                   Tuvaluan
                 </option>
                 <option
-                  value="ugandan"
+                  value="Ugandan"
                 >
                   Ugandan
                 </option>
                 <option
-                  value="ukrainian"
+                  value="Ukrainian"
                 >
                   Ukrainian
                 </option>
                 <option
-                  value="uruguayan"
+                  value="Uruguayan"
                 >
                   Uruguayan
                 </option>
                 <option
-                  value="uzbekistani"
+                  value="Uzbekistani"
                 >
                   Uzbekistani
                 </option>
                 <option
-                  value="venezuelan"
+                  value="Venezuelan"
                 >
                   Venezuelan
                 </option>
                 <option
-                  value="vietnamese"
+                  value="Vietnamese"
                 >
                   Vietnamese
                 </option>
                 <option
-                  value="welsh"
+                  value="Welsh"
                 >
                   Welsh
                 </option>
                 <option
-                  value="yemenite"
+                  value="Yemenite"
                 >
                   Yemenite
                 </option>
                 <option
-                  value="zambian"
+                  value="Zambian"
                 >
                   Zambian
                 </option>
                 <option
-                  value="zimbabwean"
+                  value="Zimbabwean"
                 >
                   Zimbabwean
                 </option>
@@ -1239,17 +1226,17 @@ exports[`EditTeacherProfile should render correctly 1`] = `
               <option
                 value="Married"
               >
-                married
+                Married
               </option>
               <option
                 value="Single"
               >
-                single
+                Single
               </option>
               <option
                 value="Domestic-partner"
               >
-                domestic partner
+                Domestic Partner
               </option>
             </select>
             <label
@@ -1438,6 +1425,32 @@ exports[`EditTeacherProfile should render correctly 1`] = `
                 3+
               </option>
             </select>
+            <label
+              htmlFor="teacher-password"
+            >
+              Enter Existing Password or a New Password
+            </label>
+            <input
+              id="teacher-password"
+              name="password"
+              placeholder="please enter password"
+              required={true}
+              title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more  characters"
+              type="password"
+            />
+            <label
+              htmlFor="teacher-password-match"
+            >
+              Re-enter Password
+            </label>
+            <input
+              id="teacher-password-match"
+              name="password_match"
+              placeholder="please re-enter password"
+              required={true}
+              title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more  characters"
+              type="password"
+            />
             <button
               type="submit"
             >
