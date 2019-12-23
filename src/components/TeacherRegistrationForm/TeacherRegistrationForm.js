@@ -103,7 +103,7 @@ function TeacherRegistrationForm(props) {
                 <select id='teacher-sex' name='sex' required>
                     <option value='Male'>Male</option>
                     <option value='Female'>Female</option>
-                    <option value='Others'>Others</option>
+                    <option value='Other'>Other</option>
                 </select>
 
                 <label htmlFor='teacher-nationality'>Nationality</label>

@@ -143,9 +143,9 @@ exports[`EditTeacherProfile should render correctly 1`] = `
                 Female
               </option>
               <option
-                value="Others"
+                value="Other"
               >
-                Others
+                Other
               </option>
             </select>
             <label
