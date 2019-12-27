@@ -12,15 +12,23 @@ class LoginForm extends Component {
   static contextType = UserContext
 
   state = {
-    userType: null,
+    userType: 'teacher',
     error: null,
     loading: false
   }
 
   handleUserTypeChange = (ev) => {
-    this.setState({
-      userType: ev.target.value
-    })
+    if (this.state.userType !== 'teacher') {
+      console.log('here')
+      this.setState({
+        userType: 'teacher'
+      })
+    } else {
+      this.setState({
+        userType: ev.target.value
+      })
+    }
+
   }
 
   handleSubmitJwtAuth = ev => {
@@ -86,23 +94,23 @@ class LoginForm extends Component {
     }
   }
 
-  handleDemo = (ev) => {
-    if (ev.target.value === 'teacher') {
-      // document.getElementById('teacher').checked = true
-      document.getElementById('username').value = 'NatBowie'
-      document.getElementById('password').value = 'Password1!'
-    }
-    // if (ev.target.value === 'school') {
-    //   // document.getElementById('school').checked = true
-    //   document.getElementById('username').value = 'testSchool1'
-    //   document.getElementById('password').value = 'Password1!'
-    // }
-    if (ev.target.value === 'admin') {
-      // document.getElementById('admin').checked = true
-      document.getElementById('username').value = 'dunder'
-      document.getElementById('password').value = 'Password1!'
-    }
-  }
+  // handleDemo = (ev) => {
+  //   if (ev.target.value === 'teacher') {
+  //     document.getElementById('teacher').checked = true
+  //     document.getElementById('username').value = 'NatBowie'
+  //     document.getElementById('password').value = 'Password1!'
+  //   }
+  //   if (ev.target.value === 'school') {
+  //     document.getElementById('school').checked = true
+  //     document.getElementById('username').value = 'testSchool1'
+  //     document.getElementById('password').value = 'Password1!'
+  //   }
+  //   if (ev.target.value === 'admin') {
+  //     document.getElementById('admin').checked = true
+  //     document.getElementById('username').value = 'dunder'
+  //     document.getElementById('password').value = 'Password1!'
+  //   }
+  // }
 
   render() {
     const { error, loading } = this.state
@@ -110,24 +118,24 @@ class LoginForm extends Component {
     return (
       <form className="LoginForm" onSubmit={this.handleSubmitJwtAuth}>
         <div role="alert">{error && <p className="red">{error}</p>}</div>
-        <fieldset required>
-          <legend htmlFor="account-type">I am a:</legend>
+        {/* <fieldset required> */}
+        {/* <legend htmlFor="account-type">I am a:</legend>
           <label htmlFor="teacher">Teacher</label>
-          <input type="radio" id="teacher" name="account-type" value="teacher" onChange={this.handleUserTypeChange} />
-          {/* <label htmlFor="school">School</label>
+          <input type="radio" id="teacher" name="account-type" value="teacher" onChange={this.handleUserTypeChange} /> */}
+        {/* <label htmlFor="school">School</label>
           <input type="radio" id="school" name="account-type" value="school" onChange={this.handleUserTypeChange} /> */}
-          <label htmlFor="admin">Admin</label>
-          <input type="radio" id="admin" name="account-type" value="admin" onChange={this.handleUserTypeChange} />
-        </fieldset>
-        <fieldset>
-          <legend>Demo Account: </legend>
-          <select id="demo-select" onChange={this.handleDemo}>
-            <option value="">--Please choose an option--</option>
-            <option value="teacher">Teacher</option>
-            {/* <option value="school">School</option> */}
-            <option value="admin">Admin</option>
-          </select>
-        </fieldset>
+        {/* <label htmlFor="admin">Admin</label>
+          <input type="radio" id="admin" name="account-type" value="admin" onChange={this.handleUserTypeChange} /> */}
+        {/* </fieldset> */}
+        {/* <fieldset> */}
+        {/* <legend>Demo Account: </legend> */}
+        {/* <select id="demo-select" onChange={this.handleDemo}> */}
+        {/* <option value="">--Please choose an option--</option>
+            <option value="teacher">Teacher</option> */}
+        {/* <option value="school">School</option> */}
+        {/* <option value="admin">Admin</option> */}
+        {/* </select> */}
+        {/* </fieldset> */}
         <div className="username">
           <label htmlFor="username">Username</label>
           <input required name="username" id="username" type="username" autoComplete="new-password" />
@@ -142,7 +150,13 @@ class LoginForm extends Component {
             id="password"
           />
         </div>
-        <button type="submit">{loading ? <LoadingSpinner /> : 'Submit'}</button>
+        <button type="submit">{loading ? <LoadingSpinner /> : 'Login'}</button>
+
+        <fieldset id="admin-login">
+          <input type="checkbox" id="admin-input" name="account-type" value="admin" onClick={this.handleUserTypeChange} /><label htmlFor="admin-input" id="admin-label">Check this only if you are an administrator.</label>
+        </fieldset>
+
+
       </form >
     )
   }
