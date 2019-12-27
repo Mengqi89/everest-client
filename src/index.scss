@@ -1,3 +1,5 @@
+@import '../src/assets/variables.scss';
+
 * {
   box-sizing: border-box;
 }
@@ -73,4 +75,16 @@ h3 {
 
 .red {
   color: red;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: $accent-brown;
+  height: 10vh;
+  position: relative;
+  bottom: 0px;
+  width: 100%;
 }

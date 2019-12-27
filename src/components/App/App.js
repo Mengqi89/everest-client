@@ -45,6 +45,11 @@ class App extends React.Component {
             <Route component={NotFoundPage} />
           </Switch>
         </main>
+        <footer>
+          <p>
+            © <span id="currentYear">2019</span> Everest Education, all rights reserved.
+          </p>
+        </footer>
       </div>
     )
   }
