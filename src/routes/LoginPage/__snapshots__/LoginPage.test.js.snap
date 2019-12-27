@@ -20,64 +20,6 @@ exports[`LoginPage route component renders the UI as expected 1`] = `
       <div
         role="alert"
       />
-      <fieldset
-        required={true}
-      >
-        <legend
-          htmlFor="account-type"
-        >
-          I am a:
-        </legend>
-        <label
-          htmlFor="teacher"
-        >
-          Teacher
-        </label>
-        <input
-          id="teacher"
-          name="account-type"
-          onChange={[Function]}
-          type="radio"
-          value="teacher"
-        />
-        <label
-          htmlFor="admin"
-        >
-          Admin
-        </label>
-        <input
-          id="admin"
-          name="account-type"
-          onChange={[Function]}
-          type="radio"
-          value="admin"
-        />
-      </fieldset>
-      <fieldset>
-        <legend>
-          Demo Account: 
-        </legend>
-        <select
-          id="demo-select"
-          onChange={[Function]}
-        >
-          <option
-            value=""
-          >
-            --Please choose an option--
-          </option>
-          <option
-            value="teacher"
-          >
-            Teacher
-          </option>
-          <option
-            value="admin"
-          >
-            Admin
-          </option>
-        </select>
-      </fieldset>
       <div
         className="username"
       >
@@ -113,8 +55,25 @@ exports[`LoginPage route component renders the UI as expected 1`] = `
       <button
         type="submit"
       >
-        Submit
+        Login
       </button>
+      <fieldset
+        id="admin-login"
+      >
+        <input
+          id="admin-input"
+          name="account-type"
+          onClick={[Function]}
+          type="checkbox"
+          value="admin"
+        />
+        <label
+          htmlFor="admin-input"
+          id="admin-label"
+        >
+          Check this only if you are an administrator.
+        </label>
+      </fieldset>
     </form>
   </div>
 </div>

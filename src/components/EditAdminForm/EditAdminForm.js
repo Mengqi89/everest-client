@@ -59,7 +59,7 @@ class EditAdminForm extends Component {
     render() {
         const { hasError } = this.state
         return <div className="EditAdminForm">
-            <h2>Editing {this.state.username}</h2>
+            <h2>Editing {this.state.username} Profile</h2>
             <form onSubmit={this.handleFormSubmit}>
                 <div>
                     {hasError && <p className='red'>{hasError}</p>}

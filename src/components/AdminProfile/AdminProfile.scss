@@ -1,11 +1,13 @@
 @import '../../assets/variables.scss';
 
 .AdminProfile {
+  height: 100vh;
   margin: 5em 0;
   padding: 1em;
   display: flex;
   flex-direction: column;
   text-align: center;
+
   h2 {
     margin-bottom: 1em;
     color: $accent-red;
@@ -13,7 +15,7 @@
   div {
     width: 80%;
     background: $white;
-    margin: auto;
+    margin: 0 auto;
     @include box-shadow-reg; 
   }
   ul, p {
