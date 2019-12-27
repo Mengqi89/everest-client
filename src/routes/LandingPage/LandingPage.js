@@ -6,7 +6,6 @@ import chinaTwo from '../../assets/china-2.jpg'
 import chinaFour from '../../assets/china-4.png'
 import Typing from 'react-typing-animation'
 import logo from '../../assets/logo-blue.png'
-import Shanghai from '../../assets/shanghai-1.jpg'
 
 import './LandingPage.scss'
 
