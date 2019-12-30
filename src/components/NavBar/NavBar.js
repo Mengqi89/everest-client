@@ -91,12 +91,12 @@ class NavBar extends Component {
         {/* <div id="menu" onClick={(ev) => this.onClickMenu()}> */}
         <li id="bar1" className="bar">
           <Link to="/about-us">
-            About Us
+            About
           </Link>
         </li>
         <li id="bar2" className="bar">
           <Link to="/jobs">
-            View Jobs
+            Jobs
           </Link>
         </li>
         <li id="bar3" className="bar">
