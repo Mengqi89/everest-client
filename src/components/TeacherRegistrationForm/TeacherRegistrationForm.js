@@ -11,7 +11,7 @@ function TeacherRegistrationForm(props) {
     const handleSubmit = ev => {
         ev.preventDefault()
 
-        const { username, email, password, first_name, last_name, age, sex, race, nationality, native_speaker,
+        const { username, email, password, password_confirm, first_name, last_name, age, sex, race, nationality, native_speaker,
             married, highest_degree, field_of_degree, school, certification, years_of_experience,
             years_in_china, years_teaching_abroad } = ev.target
 
@@ -19,6 +19,7 @@ function TeacherRegistrationForm(props) {
             username: username.value,
             email: email.value,
             password: password.value,
+            password_confirm: password_confirm.value,
             first_name: first_name.value,
             last_name: last_name.value,
             age: age.value,
@@ -40,7 +41,8 @@ function TeacherRegistrationForm(props) {
             .then(res => 
                 username.value = '',
                 email.value = '',
-                password.value = '', 
+                password.value = '',
+                password_confirm.value='',
                 first_name.value = '', 
                 last_name.value = '', 
                 age.value = '', 
@@ -89,6 +91,11 @@ function TeacherRegistrationForm(props) {
                 <input id='teacher-password' type='password' 
                 title='Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more 
                 characters' name='password' required></input>
+
+                <label htmlFor='teacher-password-confirm'>Confirm Password</label>
+                <input id='teacher-password-confirm' type='password' 
+                title='Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more 
+                characters' name='password_confirm' required></input>
 
                 <label htmlFor='teacher-firstname'>First Name</label>
                 <input id='teacher-firstname' type='text' name='first_name' required></input>
