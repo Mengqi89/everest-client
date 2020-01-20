@@ -120,11 +120,13 @@ class NavBar extends Component {
       <>
         <nav className="NavBar">
           <ul>
-            <Link to="/">
-              <h1>
-                <img src={logo} alt="logo" id="logo" />
-              </h1>
-            </Link>
+            <li>
+              <Link to="/">
+                <h1>
+                  <img src={logo} alt="logo" id="logo" />
+                </h1>
+              </Link>
+            </li>
           </ul>
           <ul className="nav-links">
             {loggedIn ? this.renderLogoutLink() : this.renderLoginLink()}
