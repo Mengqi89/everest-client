@@ -5,7 +5,6 @@ import './EditSchoolForm.scss'
 import SchoolApiService from '../../services/school-api-service'
 import AutosuggestDropdown from '../AutosuggestDropdown/AutosuggestDropdown'
 
-// eslint-disable-next-line
 const schoolKeys = [
   'school_name',
   'school_type',

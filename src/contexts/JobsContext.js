@@ -159,23 +159,6 @@ export class JobsProvider extends Component {
         //recursive filter
         tempJobs = this.filter(salary, location, gradeLevel, keyword, tempJobs)
 
-        //filter by keyword
-        // if (keyword !== '') {
-        //     let lowerCaseKeyword = keyword.toLowerCase()
-        //     function includesStr(values, str) {
-        //         return values.map(function (value) {
-        //             return String(value).toLowerCase()
-        //         }).find(function (value) {
-        //             return value.includes(lowerCaseKeyword)
-        //         })
-        //     }
-
-        //     tempJobs = tempJobs.filter(function (item) {
-        //         return includesStr(Object.values(item), keyword)
-        //     })
-        // }
-
-        // change state
         this.setState({
             filtered: true,
             filteredJobs: [...tempJobs]

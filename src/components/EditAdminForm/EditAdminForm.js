@@ -10,7 +10,6 @@ class EditAdminForm extends Component {
         last_name: '',
         username: '',
         email: '',
-        // password: '',
         user_id: '',
         hasError: null
     }
@@ -48,8 +47,6 @@ class EditAdminForm extends Component {
         const updatedAdmin = { first_name, last_name, username, email }
         AdminApiService.updateAdmin(updatedAdmin, this.state.user_id)
             .then(admin =>
-                // AdminApiService
-                //     .postLogin({ username: admin.username, password: this.state.password })
                 this.props.history.push('/profile')
             )
             .catch(res => this.setState({ hasError: res.error }))
@@ -72,9 +69,6 @@ class EditAdminForm extends Component {
 
                 <label htmlFor="email">Email: </label>
                 <input type="email" value={this.state.email} name="email" id="email" onChange={this.handleUpdate}></input>
-                {/* 
-                <label htmlFor="password">Password: </label>
-                <input type="password" name="password" id="password" onChange={this.handleUpdate}></input> */}
 
                 <button type="submit">Submit</button>
                 <button type="reset" onClick={this.clearState}>Reset</button>

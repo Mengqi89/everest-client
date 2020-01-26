@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom'
 import NationalityList from './NationalityList'
 import './TeacherRegistrationForm.scss'
 import TeacherApiService from '../../services/teacher-api-service'
-// import TokenService from '../../services/token-service'
 
 function TeacherRegistrationForm(props) {
     const [ error, setError ] = useState(null)
@@ -59,13 +58,7 @@ function TeacherRegistrationForm(props) {
                 years_in_china.value = '', 
                 years_teaching_abroad.value = '',
             )
-            // .then(res => 
-            //     TeacherApiService.postLogin({username: newTeacher.username, password: newTeacher.password})
-            // )
             .then(res => {
-                // TokenService.saveAuthToken(res.authToken)
-                // TokenService.saveUserType('teacher')
-                // props.onSubmitSuccess()
                 props.history.push('/login')
             })
             .catch(res => 
@@ -75,7 +68,6 @@ function TeacherRegistrationForm(props) {
 
     return (
         <section>
-            {/* <h3>Your teaching experience in China begins here!</h3> */}
             <form className='form teacher-registration' onSubmit={handleSubmit}>
                 <div role='alert'>
                     {error && <p className='red'>{error}</p>}

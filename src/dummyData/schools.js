@@ -15,8 +15,6 @@ const SCHOOLS = [
       apartment_provided: true,
       housing_stipend: 2000,
       size_of_housing: '2 Bed/2 Bath',
-      // "shared_room": true,
-      // "private_room": false,
       shared_or_private_living_space: 'Shared',
       housing_notes: 'Shared living room with 1 other teacher',
       housing_on_or_off: 'Off Campus',

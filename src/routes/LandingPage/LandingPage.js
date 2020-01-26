@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import chinaOne from '../../assets/china-1.jpg'
 import chinaTwo from '../../assets/china-2.jpg'
-// import chinaThree from '../../assets/china-3.jpg'
 import chinaFour from '../../assets/china-4.png'
 import Typing from 'react-typing-animation'
 import logo from '../../assets/logo-blue.png'
@@ -22,7 +21,12 @@ class LandingPage extends Component {
           </Typing>
         </section>
         <section id="why-everest">
-          <img data-src={logo} alt='everest logo' id='logo-blue' className='lazyload'></img>
+          <img
+            data-src={logo}
+            alt='everest logo'
+            id='logo-blue'
+            className='lazyload'
+          ></img>
           <p>We're here to help you get the teaching job you want</p>
           <p>You want to teach. Chinese students want to learn. All you need is a little help. Someone with experience who knows what it's like and understands what you need. Someone to help you navigate the paperwork and negotiate the contracts. Someone to look out for your best interests and make sure you get everything you need to be successful and truly enjoy your experience teaching in China. That’s where we come in, at no cost to you.</p>
         </section>

@@ -17,13 +17,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-    //   width: 96%;
     }
     input[type='checkbox']{
         display: flex;
         align-items: center;
         justify-content: center;
-    //   width: 96%;
 }
     button {
         @include purple-button;

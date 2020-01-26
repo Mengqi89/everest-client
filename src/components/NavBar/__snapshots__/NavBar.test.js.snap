@@ -5,18 +5,20 @@ exports[`NavBar route component renders the UI as expected 1`] = `
   className="NavBar"
 >
   <ul>
-    <a
-      href="/"
-      onClick={[Function]}
-    >
-      <h1>
-        <img
-          alt="logo"
-          id="logo"
-          src="logo-everest-eie.png"
-        />
-      </h1>
-    </a>
+    <li>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <h1>
+          <img
+            alt="logo"
+            id="logo"
+            src="logo-everest-eie.png"
+          />
+        </h1>
+      </a>
+    </li>
   </ul>
   <ul
     className="nav-links"
