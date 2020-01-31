@@ -9,97 +9,119 @@
     h2 {
     margin-bottom: 1em;
     }
-}
 
-#staff_overview {
-    width: 60%;
-    margin: auto;
-}
-
-#staff_overview p {
-    text-align: justify;
-    padding: 1em;
-    line-height: 1.2em;
-}
-
-#staff {
-    width: 60%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.staff_member {
-    padding: 1.2em;
-    width: calc(100% / 3);
-    box-shadow: 0 0 2px rgba(106, 114, 107, 0.253);
-    border-radius: 10px;
-}
-
-.staff_name {
-    font-weight: bold;
-    text-align: left;
-    padding-top: 1em;
-    padding-bottom: 0.3em;
-}
-
-.staff_title {
-    text-align: left;
-    padding-bottom: 1em;
-}
-
-.staff_description {
-    text-align: justify;
-    line-height: 1.2em;
-}
-
-.staff_member img {
-    width: 100%;
-}
-
-@media screen and (min-width: 2200px) {
-    #staff {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 40%;
-    }
-    #staff_overview {
-        width: 40%;
-    }
-    .staff_member {
-    padding: 1.2em;
-    width: calc(100% / 3);
-}
-}
-
-@media screen and (max-width: 1600px) {
-    #staff {
+    #About {
+        width: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
-    .staff_member {
-        width: 100%;
+
+    .about-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        margin: 1.2em auto;
+        text-align: left;
+    }
+
+    // #about-logo {
+    //     width: 70%;
+    //     margin: 1em auto;
+    // }
+
+    #about-fesco {
+        
         img {
-            width: calc(100% / 3);
+            display: flex;
+            margin: auto;
         }
+    }
+
+    // #about-kejibu {
+    //     width: 80%;
+    //     margin: 1em auto;
+    // }
+
+    // #about-hurun {
+    //     width: 70%;
+    //     margin: 1em auto;
+    // }
+}
+
+@media screen and (min-width: 768px) {
+    .AboutPage {
+    
+        #About div {
+            width: 60%;
+            line-height: 1.5em;
+        }
+        
+    #about-logo {
+        width: 40%;
+        margin: 1em auto;
+    }
+
+    // #about-fesco {
+    //     width: 25%;
+    //     margin: 1em auto;
+    // }
+
+    #about-kejibu {
+        width: 70%;
+        margin: 1em auto;
+    }
+
+    #about-hurun {
+        width: 60%;
+        margin: 1em auto;
+    }
     }
 }
 
-@media screen and (max-width: 800px) {
-    #staff {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-    }
-    #staff_overview {
-        width: 80%;
-    }
-    .staff_member {
-        width: 100%;
-        img {
-            width: calc(100% / 3);
-        }
-    }
-}
+// @media screen and (min-width: 2200px) {
+//     #staff {
+//         display: flex;
+//         flex-direction: row;
+//         flex-wrap: wrap;
+//         width: 40%;
+//     }
+//     #staff_overview {
+//         width: 40%;
+//     }
+//     .staff_member {
+//     padding: 1.2em;
+//     width: calc(100% / 3);
+// }
+// }
+
+// @media screen and (max-width: 1600px) {
+//     #staff {
+//         display: flex;
+//         flex-direction: column;
+//     }
+//     .staff_member {
+//         width: 100%;
+//         img {
+//             width: calc(100% / 3);
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 800px) {
+//     #staff {
+//         display: flex;
+//         flex-direction: column;
+//         width: 80%;
+//     }
+//     #staff_overview {
+//         width: 80%;
+//     }
+//     .staff_member {
+//         width: 100%;
+//         img {
+//             width: calc(100% / 3);
+//         }
+//     }
+// }

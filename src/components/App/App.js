@@ -37,7 +37,7 @@ class App extends React.Component {
             <Route exact path={'/jobs'} component={JobPage} />
             <Route exact path={'/postJob'} component={PostJobForm} />
             <PrivateRoute exact path={'/jobs/:job_id/apply'} component={JobApplyPage} />
-            {/* <Route exact path={'/about-us'} component={AboutPage} /> */}
+            <Route exact path={'/about-us'} component={AboutPage} />
             <PrivateRoute path={'/profile'} component={ProfilePage} />
             <PrivateRoute path={'/edit-profile'} component={EditProfilePage} />
             <PrivateRoute exact path={'/applications'} component={ApplicationsPage} />
