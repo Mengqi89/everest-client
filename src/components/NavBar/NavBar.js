@@ -89,11 +89,11 @@ class NavBar extends Component {
     return (
       <>
         {/* <div id="menu" onClick={(ev) => this.onClickMenu()}> */}
-        <li id="bar1" className="bar">
+        {/* <li id="bar1" className="bar">
           <Link to="/about-us">
             About
           </Link>
-        </li>
+        </li> */}
         <li id="bar2" className="bar">
           <Link to="/jobs">
             Jobs
