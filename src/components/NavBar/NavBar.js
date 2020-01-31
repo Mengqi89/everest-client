@@ -89,11 +89,11 @@ class NavBar extends Component {
     return (
       <>
         {/* <div id="menu" onClick={(ev) => this.onClickMenu()}> */}
-        {/* <li id="bar1" className="bar">
+        <li id="bar1" className="bar">
           <Link to="/about-us">
             About
           </Link>
-        </li> */}
+        </li>
         <li id="bar2" className="bar">
           <Link to="/jobs">
             Jobs
@@ -121,14 +121,14 @@ class NavBar extends Component {
         <nav className="NavBar">
           <ul>
             <li>
-              <Link to="/">
+              <Link to='/'>
                 <h1>
-                  <img src={logo} alt="logo" id="logo" />
+                  <img src={logo} alt='logo' id='logo' />
                 </h1>
               </Link>
             </li>
           </ul>
-          <ul className="nav-links">
+          <ul className='nav-links'>
             {loggedIn ? this.renderLogoutLink() : this.renderLoginLink()}
           </ul>
         </nav>
