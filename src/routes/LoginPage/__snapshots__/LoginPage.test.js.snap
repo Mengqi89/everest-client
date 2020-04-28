@@ -53,6 +53,7 @@ exports[`LoginPage route component renders the UI as expected 1`] = `
         />
       </div>
       <button
+        id="login-button"
         type="submit"
       >
         Login
@@ -74,6 +75,24 @@ exports[`LoginPage route component renders the UI as expected 1`] = `
           Check this only if you are an administrator.
         </label>
       </fieldset>
+      <div
+        id="demo"
+      >
+        <button
+          className="demo-button"
+          onClick={[Function]}
+          value="teacher"
+        >
+          Teacher Demo
+        </button>
+        <button
+          className="demo-button"
+          onClick={[Function]}
+          value="admin"
+        >
+          Admin Demo
+        </button>
+      </div>
     </form>
   </div>
 </div>

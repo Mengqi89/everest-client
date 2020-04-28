@@ -25,6 +25,17 @@ exports[`NavBar route component renders the UI as expected 1`] = `
   >
     <li
       className="bar"
+      id="bar1"
+    >
+      <a
+        href="/about-us"
+        onClick={[Function]}
+      >
+        About
+      </a>
+    </li>
+    <li
+      className="bar"
       id="bar2"
     >
       <a
