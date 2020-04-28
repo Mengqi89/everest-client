@@ -15,6 +15,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        line-height: 1.5em;
     }
 
     .about-card {
@@ -26,10 +27,10 @@
         text-align: left;
     }
 
-    // #about-logo {
-    //     width: 70%;
-    //     margin: 1em auto;
-    // }
+    #about-logo {
+        width: 70%;
+        margin: 1em auto;
+    }
 
     #about-fesco {
         
@@ -39,15 +40,15 @@
         }
     }
 
-    // #about-kejibu {
-    //     width: 80%;
-    //     margin: 1em auto;
-    // }
+    #about-kejibu {
+        width: 80%;
+        margin: 1em auto;
+    }
 
-    // #about-hurun {
-    //     width: 70%;
-    //     margin: 1em auto;
-    // }
+    #about-hurun {
+        width: 70%;
+        margin: 1em auto;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -55,18 +56,12 @@
     
         #About div {
             width: 60%;
-            line-height: 1.5em;
         }
         
     #about-logo {
         width: 40%;
         margin: 1em auto;
     }
-
-    // #about-fesco {
-    //     width: 25%;
-    //     margin: 1em auto;
-    // }
 
     #about-kejibu {
         width: 70%;

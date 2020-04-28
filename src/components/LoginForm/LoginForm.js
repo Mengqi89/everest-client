@@ -16,9 +16,23 @@ class LoginForm extends Component {
     loading: false
   }
 
+  handleDemo = (ev) => {
+    if (ev.target.value === 'teacher') {
+      document.getElementById('username').value = 'NatBowie'
+      document.getElementById('password').value = 'Password1!'
+    }
+    if (ev.target.value === 'admin') {
+      this.setState({
+        userType: ev.target.value
+      })
+      document.getElementById('admin-input').checked = true
+      document.getElementById('username').value = 'dunder'
+      document.getElementById('password').value = 'Password1!'
+    }
+  }
+
   handleUserTypeChange = (ev) => {
     if (this.state.userType !== 'teacher') {
-      console.log('here')
       this.setState({
         userType: 'teacher'
       })
@@ -52,7 +66,10 @@ class LoginForm extends Component {
         })
         .then(() => this.props.onLoginSuccess())
         .catch(res => {
-          this.setState({ error: res.error })
+          this.setState({
+            loading: false,
+            error: res.error
+          })
         })
     }
     if (this.state.userType === 'teacher') {
@@ -70,7 +87,10 @@ class LoginForm extends Component {
           this.props.history.push('/profile')
         })
         .catch(res => {
-          this.setState({ error: res.error })
+          this.setState({
+            loading: false,
+            error: res.error
+          })
         })
     }
   }
@@ -79,28 +99,31 @@ class LoginForm extends Component {
     const { error, loading } = this.state
 
     return (
-      <form className="LoginForm" onSubmit={this.handleSubmitJwtAuth}>
-        <div role="alert">{error && <p className="red">{error}</p>}</div>
-        <div className="username">
-          <label htmlFor="username">Username</label>
-          <input required name="username" id="username" type="username" autoComplete="new-password" />
+      <form className='LoginForm' onSubmit={this.handleSubmitJwtAuth}>
+        <div role='alert'>{error && <p className='red'>{error}</p>}</div>
+        <div className='username'>
+          <label htmlFor='username'>Username</label>
+          <input required name='username' id='username' type='username' autoComplete='new-password' />
         </div>
-        <div className="password">
-          <label htmlFor="password">Password</label>
+        <div className='password'>
+          <label htmlFor='password'>Password</label>
           <input
-            autoComplete="new-password"
+            autoComplete='new-password'
             required
-            name="password"
-            type="password"
-            id="password"
+            name='password'
+            type='password'
+            id='password'
           />
         </div>
-        <button type="submit">{loading ? <LoadingSpinner /> : 'Login'}</button>
+        <button id='login-button' type='submit'>{loading ? <LoadingSpinner /> : 'Login'}</button>
 
-        <fieldset id="admin-login">
-          <input type="checkbox" id="admin-input" name="account-type" value="admin" onClick={this.handleUserTypeChange} /><label htmlFor="admin-input" id="admin-label">Check this only if you are an administrator.</label>
+        <fieldset id='admin-login'>
+          <input type='checkbox' id='admin-input' name='account-type' value='admin' onClick={this.handleUserTypeChange} /><label htmlFor='admin-input' id='admin-label'>Check this only if you are an administrator.</label>
         </fieldset>
-
+        <div id='demo'>
+          <button className='demo-button' value='teacher' onClick={this.handleDemo}>Teacher Demo</button>
+          <button className='demo-button' value='admin' onClick={this.handleDemo}>Admin Demo</button>
+        </div>
 
       </form >
     )
