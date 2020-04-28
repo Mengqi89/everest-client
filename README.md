@@ -1,8 +1,11 @@
 # Everest App 
 
-<a href="https://everest.wmq516.now.sh/" target="_blank">Live App</a> 
+<a href="https://everest.wmq516.now.sh/" target="_blank">Live App</a>
 
-Everest is an application for a client (Everest International Education) to handle applicants for teaching at schools in China. It has three types of main users, applicants/teachers, job posters/schools, and company/admins.
+### Homepage
+<img src="./readme_assets/homePage.png" alt="homepage" width="450">
+
+Everest is an application for a client (Everest International Education) to handle applicants for teaching at schools in China. It has two types of users, teacher and administrator.
 
 ---
 ## Table of Contents
@@ -21,9 +24,6 @@ Everest is an application for a client (Everest International Education) to hand
 
 ### Teacher Profile
 <img src="./readme_assets/teacherProfile.png" alt="teacher profile" width="450">
-
-### School Profile
-<img src="./readme_assets/schoolProfile.png" alt="school profile" width="450">
 
 ### Jobs Page
 <img src="./readme_assets/jobsPage.png" alt="jobs page" width="450">
